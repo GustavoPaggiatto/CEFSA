@@ -1,0 +1,11 @@
+Pessoal tem um arquivo aqui do que fiz para funcionar isto kkk
+
+	-	Download do Git no site oficial (pf)
+	-	dar um git clone https://github.com/GustavoPaggiatto/CEFSA.git
+	-	dar um git pull CEFSA master
+	-	Tem que funcionar kkk
+	- 	Dar commit:
+	- 	dar git add no arquivo pretendido
+	-	dar git commit -m "mensagem do que é o comit entre áspas"
+	-	digitar git push CEFSA
+		
