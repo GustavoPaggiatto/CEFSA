@@ -7,6 +7,7 @@ package DAO;
 
 import Beans.TiposQuartos;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import util.HibernateUtility;
 
 /**
@@ -16,9 +17,16 @@ import util.HibernateUtility;
 public class DAOTiposQuartos {
 
     public TiposQuartos obterTipoQuarto(int idTipoQuarto) {
-        Query query = HibernateUtility.getSession().createQuery("from TiposQuartos where ID = :idTipoQuarto");
-        query.setParameter("idTipoQuarto", idTipoQuarto);
+        TiposQuartos retorno;
+        Session session = HibernateUtility.getSession();
         
-        return((TiposQuartos)query.list().get(0));
+        Query query = session.createQuery("from TiposQuartos where ID = :idTipoQuarto");
+        query.setParameter("idTipoQuarto", idTipoQuarto);        
+                       
+        retorno = ((TiposQuartos)query.list().get(0));
+        
+        session.close();
+        
+        return retorno;
     }
 }
