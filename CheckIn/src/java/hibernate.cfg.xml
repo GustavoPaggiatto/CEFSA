@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://LUIZ:1433;databaseName=CEFSA_DEV</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password">123456</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        
+        <property name="hibernate.c3p0.max_size">10</property>
+        <property name="hibernate.c3p0.min_size">2</property>
+        <property name="hibernate.c3p0.timeout">5000</property>
+        <property name="hibernate.c3p0.max_statements">10</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+        <property name="hibernate.c3p0.acquire_increment">2</property>
+        <property name="hibernate.use_sql_comments">true</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.generate_statistics">true</property>
+        
+        <mapping class="Beans.TiposQuartos"></mapping>
+        <mapping class="Beans.LocalidadesQuartos"></mapping>
+        <mapping class="Beans.Pais"></mapping>
+        <mapping class="Beans.Estado"></mapping>
+        <mapping class="Beans.TipoHotel"></mapping>
+        <mapping class="Beans.Acompanhante"></mapping>
+        <mapping class="Beans.Cidade"></mapping>
+        <mapping class="Beans.Cliente"></mapping>
+        <mapping class="Beans.CotacoesStatus"></mapping>
+        <mapping class="Beans.Deficiencia"></mapping>
+        <mapping class="Beans.Endereco"></mapping>
+        <mapping class="Beans.Hotel"></mapping>
+        <mapping class="Beans.Reservas"></mapping>
+        <mapping class="Beans.ReservasStatus"></mapping>
+        <mapping class="Beans.Telefones"></mapping>        
+        <mapping class="Beans.Quartos"></mapping>
+        <mapping class="Beans.CotacoesReservas"></mapping>
+        <mapping class="Beans.ClienteFisico"></mapping>
+        <mapping class="Beans.ClienteJuridico"></mapping>
+    </session-factory>
+</hibernate-configuration>
