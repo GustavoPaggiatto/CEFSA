@@ -3,13 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package DAO;
+
+import Beans.Quartos;
+import org.hibernate.Query;
+import util.HibernateUtility;
 
 /**
  *
  * @author Gustavo
  */
 public class DAOQuartos {
-    
+
+    public Quartos obterQuarto(int idQuarto) {
+        Query query = HibernateUtility.getSession().createQuery("from Quartos where ID = :idQuarto");
+        query.setParameter("idQuarto", idQuarto);
+
+        return ((Quartos) query.list().get(0));
+    }
 }

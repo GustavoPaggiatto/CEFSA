@@ -4,10 +4,10 @@
     <session-factory>
         <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
         <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-        <property name="hibernate.connection.url">jdbc:sqlserver://LUIZ:1433;databaseName=CEFSA_DEV</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://GUSTAVO-PC\SQLEXPRESS:1433;databaseName=CEFSA_DEV</property>
         <property name="hibernate.connection.username">sa</property>
         <property name="hibernate.connection.password">123456</property>
-        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
         
         <property name="hibernate.c3p0.max_size">10</property>
         <property name="hibernate.c3p0.min_size">2</property>
