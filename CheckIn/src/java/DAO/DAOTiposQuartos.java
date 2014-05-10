@@ -6,6 +6,7 @@
 package DAO;
 
 import Beans.TiposQuartos;
+import java.lang.reflect.Type;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import util.HibernateUtility;
@@ -31,7 +32,12 @@ public class DAOTiposQuartos extends Base {
     }
     
     public void insertTiposQuartos(TiposQuartos tiposQuartos){
-        super.setSession();
+        //super.setSession();
         super.save(tiposQuartos);
+    }
+    
+    public Iterable<TiposQuartos> ConsultarTiposQuartos(String cons, Type t)
+    {
+        return (Iterable<TiposQuartos>) Where(cons, t);
     }
 }

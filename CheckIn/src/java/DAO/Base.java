@@ -5,7 +5,10 @@
  */
 package DAO;
 
+import Beans.Reservas;
 import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import util.HibernateUtility;
 
@@ -15,17 +18,58 @@ import util.HibernateUtility;
  */
 public abstract class Base<T> {
 
-    private Class classe;
+    private Class<T> classe;
     private Session session;
-    //protected Session session;
 
     public Base() {
-//        this.classe = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+        //this.classe = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
         setSession();
     }
 
     public void setSession() {
         this.session = HibernateUtility.getSession();
+    }
+
+    public T Find(int id, Type t) {
+        Query q = session.createQuery("from " + t.getTypeName() + " where ID = :id");
+        q.setParameter("id", id);
+
+        T obj = (T) q.list().get(0);
+
+        session.close();
+
+        return obj;
+
+    }
+
+    public Iterable<T> Where(String predicado, Type t) {
+        try {
+            Query q = session.createQuery("FROM " + t.getTypeName() + " WHERE " + predicado);
+
+            Iterable<T> objs = q.list();
+
+            session.close();
+
+            return objs;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        
+        return null;
+    }
+
+    public Iterable<T> GetAll(Type t) {
+        try {
+            Query q = session.createQuery("FROM " + t.getTypeName());
+            Iterable<T> objs = q.list();
+            return objs;
+        } catch (Exception e) {
+            System.out.println("ERRO: " + e.getMessage());
+            return null;
+        } finally {
+            session.close();
+        }
+
     }
 
     public void save(T t) {
@@ -47,5 +91,5 @@ public abstract class Base<T> {
         this.session.update(t);
         this.session.getTransaction().commit();
         this.session.close();
-    }    
+    }
 }

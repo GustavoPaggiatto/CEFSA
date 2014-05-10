@@ -3,13 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package DAO;
+
+import Beans.Reservas;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import util.HibernateUtility;
 
 /**
  *
  * @author Gustavo
  */
-public class DAOReservas {
-    
+public class DAOReservas extends Base {
+
+    public Reservas obterReserva(int idReserva) {
+        
+       return (Reservas) Find(idReserva, this.getClass());
+    }
 }

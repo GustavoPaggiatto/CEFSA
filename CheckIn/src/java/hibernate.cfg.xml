@@ -38,5 +38,6 @@
         <mapping class="Beans.CotacoesReservas"></mapping>
         <mapping class="Beans.ClienteFisico"></mapping>
         <mapping class="Beans.ClienteJuridico"></mapping>
+        <mapping class="Beans.Usuario"></mapping>
     </session-factory>
 </hibernate-configuration>

@@ -3,23 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DAO;
+package Negocio;
 
 import Beans.ClienteFisico;
 import Beans.ClienteJuridico;
+import DAO.DAOClientes;
 import java.lang.reflect.Type;
 
 /**
  *
  * @author Gustavo
  */
-public class DAOClientes extends Base {
+public class NegocioClientes {
+
+    private DAO.DAOClientes _daoClientes;
+
+    public NegocioClientes() {
+        _daoClientes = new DAOClientes();
+    }
 
     public Iterable<ClienteJuridico> ObterClientesJuridicos(Type t) {
-        return super.GetAll(t);
+        return _daoClientes.ObterClientesJuridicos(t);
     }
     
-     public Iterable<ClienteFisico> ObterClientesFisicos(Type t) {
-        return super.GetAll(t);
+    public Iterable<ClienteFisico> ObterClientesFisicos(Type t) {
+        return _daoClientes.ObterClientesFisicos(t);
     }
 }

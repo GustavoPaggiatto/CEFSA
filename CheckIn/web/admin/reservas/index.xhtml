@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Checkin</title>
+
+        <style type="text/css" >
+            body {
+                font-size: 14px !important;
+                padding:  10px;
+            }
+            #leftPanel div {
+                /*corrige o bug do menu ficar por tras*/
+                overflow: visible;
+            }
+        </style>
+
+    </h:head>
+    <h:body>
+
+
+        <p:layout fullPage="true">  
+            <p:layoutUnit position="center">  
+                <h:form>  
+                    <p:megaMenu >  
+                        <p:menuitem value="Hotel 1" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 2" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 3" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
+                    </p:megaMenu> 
+                    <hr/>
+                    <h:form>  
+                        <center>
+                            <h:outputLabel value="Reservas" style="font-weight: bolder" ></h:outputLabel>
+                        </center>
+
+                        <p:dataTable paginator="true" rows="10" var="reserva" value="#{reservasBean.reservas}">  
+                            <p:column headerText="Quantidade de dias">  
+                                <h:outputText value="#{reserva.qtdDias}" />  
+                            </p:column>  
+
+                            <p:column headerText="Preço">  
+                                <h:outputText value="#{reserva.preco}" />  
+                            </p:column>  
+
+                            <p:column headerText="Data">  
+                                <h:outputFormat value="{0, date, dd/MM/yyyy}" >
+                                    <f:param value="#{reserva.dataReserva}" />
+                                </h:outputFormat>
+                            </p:column>  
+
+                            <p:column headerText="Ações"> 
+                                <p:button icon="ui-icon-pencil" />
+                                <p:button icon="ui-icon-closethick" />
+                            </p:column>  
+                        </p:dataTable> 
+                    </h:form>  
+
+                </h:form>
+            </p:layoutUnit>  
+
+
+            <p:layoutUnit id="leftPanel" position="west" size="200" resizable="true" closable="true" collapsible="true">  
+                <p:panel>
+                    <h:outputText  value="   LOGO FFS   " />
+                </p:panel>
+                <br/>
+                <h:form  > 
+                    <p:growl id="messages"/>  
+                    <p:tieredMenu style="width:180px" overlay="false">  
+                        <p:submenu label="Clientes" icon="ui-icon-person">  
+                            <p:menuitem value="Save" actionListener="#{menuBean.save}" update="messages" icon="ui-icon-disk" />  
+                            <p:menuitem value="Update" actionListener="#{menuBean.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />  
+                        </p:submenu>  
+                        <p:submenu label="Reservas" icon="ui-icon-note">  
+                            <p:menuitem value="Delete" actionListener="#{menuBean.delete}" update="messages" ajax="false" icon="ui-icon-close"/>  
+                        </p:submenu> 
+                        <p:submenu label="Quartos" icon="ui-icon-key">  
+                            <p:menuitem value="Save" actionListener="#{menuBean.save}" update="messages" icon="ui-icon-disk" />  
+                            <p:menuitem value="Update" actionListener="#{menuBean.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />  
+                        </p:submenu>  
+                        <p:separator />  
+                        <p:submenu label="Usuarios" icon="ui-icon-gear">  
+                            <p:submenu label="Prime Links">  
+                                <p:menuitem value="Prime" url="http://www.prime.com.tr" />  
+                                <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />  
+                            </p:submenu>   
+                        </p:submenu>  
+                    </p:tieredMenu>  
+                </h:form> 
+            </p:layoutUnit>  
+
+
+
+
+        </p:layout>
+
+
+
+
+
+
+
+
+    </h:body>
+</html>
+

@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Checkin</title>
+
+        <style type="text/css" >
+            body {
+                font-size: 14px !important;
+                padding:  10px;
+            }
+            #leftPanel div {
+                /*corrige o bug do menu ficar por tras*/
+                overflow: visible;
+            }
+            .negrito {
+                font-weight: bolder;
+            }
+
+
+        </style>
+
+    </h:head>
+    <h:body>
+
+
+        <p:layout fullPage="true">  
+            <p:layoutUnit position="center">  
+                <h:form>  
+                    <p:megaMenu >  
+                        <p:menuitem value="Hotel 1" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 2" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 3" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
+                    </p:megaMenu> 
+                    <hr/>
+                    <h:form>  
+                        <center>
+                            <h:outputLabel value="Clientes" style="font-weight: bolder" ></h:outputLabel>
+                        </center>
+
+                        <p:tabView id="tabView" dynamic="true" cache="true">  
+
+                            <p:tab id="tab1" title="Jurídico">  
+
+                                <p:fieldset legend="Dados da empresa">  
+                                    <h:panelGrid columns="1" cellpadding="10" style="width: 100%">  
+                                        <h:column>
+                                            <p:outputLabel styleClass="negrito" value="Razão Social:"/>
+                                            <br/>
+                                            <p:inputText style="width: 100%" id="razao-social" />
+                                        </h:column>
+                                    </h:panelGrid>  
+                                    <h:panelGrid columns="2" cellpadding="10">  
+                                        <h:column>
+                                            <p:outputLabel styleClass="negrito" value="CNPJ:"/>
+                                            <br/>
+                                            <p:inputMask id="cnpj" mask="99.999.999/9999-99" />
+                                        </h:column>
+                                        <h:column>
+                                            <p:outputLabel styleClass="negrito" value="Multinacional:"/>
+                                            <br/>
+                                            <p:selectBooleanButton id="multinacional" value="true" onLabel="Sim" 	
+                                                                   offLabel="Não" onIcon="ui-icon-check" offIcon="ui-icon-close" />
+                                        </h:column>
+                                    </h:panelGrid> 
+                                    <p:separator></p:separator>
+                                    <h:panelGrid columns="2" cellpadding="10" style="width: 100%">  
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="Endereço:"/>
+                                            <br/>
+                                            <p:inputText id="logradouro" style="width: 100%" />
+                                        </h:column>
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="Número:"/>
+                                            <br/>
+                                            <p:inputText id="numero" style="width: 30%" />
+                                        </h:column>
+                                    </h:panelGrid> 
+                                    <h:panelGrid columns="2" cellpadding="10" style="width: 100%">  
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="Bairro:"/>
+                                            <br/>
+                                            <p:inputText id="bairro" style="width: 100%" />
+                                        </h:column>
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="CEP:"/>
+                                            <br/>
+                                            <p:inputMask id="cep" style="width: 30%" mask="99999-999" />
+                                        </h:column>
+                                    </h:panelGrid>
+                                    <h:panelGrid columns="3" cellpadding="10" style="width: 100%">  
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="País:"/>
+                                            <br/>
+                                            <p:selectOneMenu  var="p">
+                                                <f:selectItem itemLabel="Selecione o país" itemValue="" />
+                                                <p:column>
+                                                    NOME PAIS
+                                                </p:column>
+                                            </p:selectOneMenu>
+                                        </h:column>
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="Estado:"/>
+                                            <br/>
+                                            <p:selectOneMenu  var="p">
+                                                <f:selectItem itemLabel="Selecione o estado" itemValue="" />
+                                                <p:column>
+                                                    NOME PAIS
+                                                </p:column>
+                                            </p:selectOneMenu>
+                                        </h:column>
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="Cidade:"/>
+                                            <br/>
+                                            <p:selectOneMenu  style="width: 100%" var="p">
+                                                <f:selectItem itemLabel="Selecione a cidade" itemValue="" />
+                                                <p:column>
+                                                    NOME PAIS
+                                                </p:column>
+                                            </p:selectOneMenu>
+                                        </h:column>
+                                    </h:panelGrid>
+
+                                </p:fieldset> 
+                                <br/>
+                                <div style="text-align: right">
+                                    <p:commandButton icon="ui-icon-cancel"  value="Cancelar"  />
+                                    <p:commandButton icon="ui-icon-disk"  value="Salvar"  />
+                                </div>
+                            </p:tab>  
+
+                            <p:tab id="tab2" title="Físico">  
+                                <p:fieldset legend="Dados do cliente">  
+                                    <h:panelGrid columns="2" cellpadding="10" style="width: 100%">  
+                                        <h:column>
+                                            <p:outputLabel styleClass="negrito" value="Nome:"/>
+                                            <br/>
+                                            <p:inputText style="width: 100%" id="nome" />
+                                        </h:column>
+                                        <h:column>
+                                            <p:outputLabel styleClass="negrito" value="Sobrenome:"/>
+                                            <br/>
+                                            <p:inputText style="width: 100%" id="sobrenome" />
+                                        </h:column>
+                                    </h:panelGrid>  
+                                    <h:panelGrid columns="1" cellpadding="10">  
+                                       <h:column>
+                                            <p:outputLabel styleClass="negrito" value="CPF:"/>
+                                            <br/>
+                                            <p:inputMask id="cpf" mask="999.999.999-99" />
+                                        </h:column>
+                                    </h:panelGrid> 
+                                    <p:separator></p:separator>
+                                    <h:panelGrid columns="2" cellpadding="10" style="width: 100%">  
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="Endereço:"/>
+                                            <br/>
+                                            <p:inputText id="logradouro-cliente" style="width: 100%" />
+                                        </h:column>
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="Número:"/>
+                                            <br/>
+                                            <p:inputText id="numero-cliente" style="width: 30%" />
+                                        </h:column>
+                                    </h:panelGrid> 
+                                    <h:panelGrid columns="2" cellpadding="10" style="width: 100%">  
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="Bairro:"/>
+                                            <br/>
+                                            <p:inputText id="bairro-cliente" style="width: 100%" />
+                                        </h:column>
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="CEP:"/>
+                                            <br/>
+                                            <p:inputMask id="cep-cliente" style="width: 30%" mask="99999-999" />
+                                        </h:column>
+                                    </h:panelGrid>
+                                    <h:panelGrid columns="3" cellpadding="10" style="width: 100%">  
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="País:"/>
+                                            <br/>
+                                            <p:selectOneMenu  var="p">
+                                                <f:selectItem itemLabel="Selecione o país" itemValue="" />
+                                                <p:column>
+                                                    NOME PAIS
+                                                </p:column>
+                                            </p:selectOneMenu>
+                                        </h:column>
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="Estado:"/>
+                                            <br/>
+                                            <p:selectOneMenu  var="p">
+                                                <f:selectItem itemLabel="Selecione o estado" itemValue="" />
+                                                <p:column>
+                                                    NOME PAIS
+                                                </p:column>
+                                            </p:selectOneMenu>
+                                        </h:column>
+                                        <h:column >
+                                            <p:outputLabel styleClass="negrito" value="Cidade:"/>
+                                            <br/>
+                                            <p:selectOneMenu  style="width: 100%" var="p">
+                                                <f:selectItem itemLabel="Selecione a cidade" itemValue="" />
+                                                <p:column>
+                                                    NOME PAIS
+                                                </p:column>
+                                            </p:selectOneMenu>
+                                        </h:column>
+                                    </h:panelGrid>
+
+                                </p:fieldset> 
+                                <br/>
+                                <div style="text-align: right">
+                                    <p:commandButton icon="ui-icon-cancel"  value="Cancelar"  />
+                                    <p:commandButton icon="ui-icon-disk"  value="Salvar"  />
+                                </div>
+                            </p:tab>  
+
+
+
+                        </p:tabView>  
+                    </h:form>  
+
+                </h:form>
+            </p:layoutUnit>  
+
+
+            <p:layoutUnit id="leftPanel" position="west" size="200" resizable="true" closable="true" collapsible="true">  
+                <p:panel>
+                    <h:outputText  value="   LOGO FFS   " />
+                </p:panel>
+                <br/>
+                <h:form  > 
+                    <p:growl id="messages"/>  
+                    <p:tieredMenu style="width:180px" overlay="false">  
+                        <p:submenu label="Clientes" icon="ui-icon-person">  
+                            <p:menuitem value="Save" actionListener="#{menuBean.save}" update="messages" icon="ui-icon-disk" />  
+                            <p:menuitem value="Update" actionListener="#{menuBean.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />  
+                        </p:submenu>  
+                        <p:submenu label="Reservas" icon="ui-icon-note">  
+                            <p:menuitem value="Delete" actionListener="#{menuBean.delete}" update="messages" ajax="false" icon="ui-icon-close"/>  
+                        </p:submenu> 
+                        <p:submenu label="Quartos" icon="ui-icon-key">  
+                            <p:menuitem value="Save" actionListener="#{menuBean.save}" update="messages" icon="ui-icon-disk" />  
+                            <p:menuitem value="Update" actionListener="#{menuBean.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />  
+                        </p:submenu>  
+                        <p:separator />  
+                        <p:submenu label="Usuarios" icon="ui-icon-gear">  
+                            <p:submenu label="Prime Links">  
+                                <p:menuitem value="Prime" url="http://www.prime.com.tr" />  
+                                <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />  
+                            </p:submenu>   
+                        </p:submenu>  
+                    </p:tieredMenu>  
+                </h:form> 
+            </p:layoutUnit>  
+
+
+
+
+        </p:layout>
+
+
+
+
+
+
+
+
+    </h:body>
+</html>
+
