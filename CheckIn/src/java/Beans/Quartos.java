@@ -44,7 +44,19 @@ public class Quartos implements Serializable{
     
     @Column(name = "valorDiaria")
     private double valorDiaria;
+    
+    @ManyToOne
+    @JoinColumn(name = "idHotel", nullable = true)
+    private Hotel hotel;
 
+    public Hotel getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
+    }
+    
     public int getID() {
         return ID;
     }

@@ -24,6 +24,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 /**
  *
@@ -32,7 +33,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Clientes")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Cliente implements Serializable{
+public class Cliente{
     
     //idCliente
     @Id
@@ -58,6 +59,17 @@ public class Cliente implements Serializable{
     @OneToMany(mappedBy = "cliente")
     private Set<CotacoesReservas> cotacoesReservas;
 
+    @Column(name = "Senha")
+    private String senha;
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    
     public Set<CotacoesReservas> getCotacoesReservas() {
         return cotacoesReservas;
     }
@@ -73,7 +85,7 @@ public class Cliente implements Serializable{
     public void setID(int ID) {
         this.ID = ID;
     }
-
+    
     public Set<Acompanhante> getAcompanhantes() {
         return acompanhantes;
     }

@@ -6,6 +6,7 @@
 package DAO;
 
 import Beans.Reservas;
+import java.lang.reflect.Type;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import util.HibernateUtility;
@@ -17,7 +18,11 @@ import util.HibernateUtility;
 public class DAOReservas extends Base {
 
     public Reservas obterReserva(int idReserva) {
-        
-       return (Reservas) Find(idReserva, this.getClass());
+
+        return (Reservas) Find(idReserva, this.getClass());
+    }
+
+    public void reservar(Reservas r) {
+        super.save(r);
     }
 }

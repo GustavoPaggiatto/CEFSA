@@ -50,8 +50,19 @@ public class Hotel implements Serializable{
     @OneToOne(fetch = FetchType.LAZY)
     private Endereco endereco;
     
-    @OneToMany(mappedBy = "hotel")
+    @OneToMany(mappedBy = "hotel", fetch = FetchType.EAGER)
     private Set<Telefones> telefones;
+    
+    @OneToMany(mappedBy = "hotel", fetch = FetchType.EAGER)
+    private Set<Quartos> quartos;
+
+    public Set<Quartos> getQuartos() {
+        return quartos;
+    }
+
+    public void setQuartos(Set<Quartos> quartos) {
+        this.quartos = quartos;
+    }
 
     public int getID() {
         return ID;

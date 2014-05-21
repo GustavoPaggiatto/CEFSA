@@ -6,6 +6,7 @@
 package DAO;
 
 import Beans.Quartos;
+import java.lang.reflect.Type;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import util.HibernateUtility;
@@ -14,7 +15,7 @@ import util.HibernateUtility;
  *
  * @author Gustavo
  */
-public class DAOQuartos {
+public class DAOQuartos extends Base{
 
     public Quartos obterQuarto(int idQuarto) {
         Quartos retorno;
@@ -28,5 +29,10 @@ public class DAOQuartos {
         session.close();
         
         return retorno;
+    }
+    
+    public Iterable<Quartos> obterQuartosPorCodigoHotel(int idHotel, Type t)
+    {
+        return super.Where("hotel.ID = " + idHotel, t);
     }
 }

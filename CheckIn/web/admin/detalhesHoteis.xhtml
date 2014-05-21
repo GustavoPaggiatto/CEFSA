@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+
+        <title>Facelet Title</title>
+        <style type="text/css" >
+            body {
+                font-size: 14px !important;
+                padding:  10px;
+            }
+            #leftPanel div {
+                /*corrige o bug do menu ficar por tras*/
+                overflow: visible;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true">  
+            <p:layoutUnit position="center">  
+                <h:form>  
+                    <p:megaMenu >  
+                        <p:menuitem value="Hotel 1" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 2" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 3" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
+                    </p:megaMenu> 
+                    <hr/>
+                    <h:form>  
+                        <center>
+                            <h:outputLabel value="Hoteis" style="font-weight: bolder" ></h:outputLabel>
+                        </center>
+
+                        <p:tabView id="tabView" dynamic="true" cache="true">  
+
+                            <p:tab id="tab1" title="Hotel">  
+                                <p:growl id="grow" showDetail="true"/>
+                                <p:fieldset legend="Informações" toggleable="true" toggleSpeed="500">
+                                    <p:ajax event="toggle" listener="#{detalhesHoteisBean.handleToggle}" update="grow"/>
+                                    <h:panelGrid style="width: 100%" columns="2" cellpadding="10">
+                                        <p:graphicImage width="50%" value="/Imagens/logoTemp.jpg"></p:graphicImage>
+                                        <h:panelGrid columns="2" width="100%" style="padding-right: 5px; text-align: right">
+                                            <h:outputText style="font-weight: bold" value="Ano de construção: "></h:outputText>
+                                            <h:outputText value="#{detalhesHoteisBean.h.anoConstrucao}"></h:outputText>                                                                                
+
+                                            <h:outputText style="font-weight: bold" value="Estrelas: "></h:outputText>
+                                            <h:outputText value="#{detalhesHoteisBean.h.qtdEstrelas}"></h:outputText>
+
+                                            <h:outputText style="font-weight: bold" value="Cidade: "></h:outputText>
+                                            <h:outputText value="#{detalhesHoteisBean.h.endereco.cidade}"></h:outputText>
+                                        </h:panelGrid>
+                                    </h:panelGrid>
+                                </p:fieldset>
+                            </p:tab>
+                            <p:tab id="tab1" title="Quartos">
+                                <p:dataTable id="dtHoteis" var="item" value="#{detalhesHoteisBean.quartos}"
+                                             paginator="true" rows="6"
+                                             paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                             rowsPerPageTemplate="5,10,15">
+
+                                    <f:facet name="Header">
+                                        hoteis
+                                    </f:facet>
+                                    <p:column selectionMode="multiple">
+                                        <p:selectBooleanCheckbox value="#{item.ID}"></p:selectBooleanCheckbox>
+                                    </p:column>
+                                    <p:column headerText="Localidade">                                       
+                                        <h:outputText value="#{item.localidade.descricao}" />
+                                    </p:column>
+                                    <p:column headerText="Nº de Hóspedes"> 
+                                        <h:outputText value="#{item.qtdHospedes}" />
+                                    </p:column>
+                                    <p:column headerText="Tipo">                                       
+                                        <h:outputText value="#{item.tipoQuarto.descricao}" />
+                                    </p:column>
+                                    <p:column headerText="Localização">                                       
+                                        <h:outputText value="#{item.valorDiaria}" />                                        
+                                    </p:column>
+                                </p:dataTable>
+                            </p:tab>
+                        </p:tabView>
+                    </h:form>
+                </h:form>
+            </p:layoutUnit>
+            <p:layoutUnit id="leftPanel" position="west" size="200" resizable="true" closable="true" collapsible="true">  
+                <p:panel>
+                    <h:outputText  value="   LOGO FFS   " />
+                </p:panel>
+                <br/>
+                <h:form  > 
+                    <p:growl id="messages"/>  
+                    <p:tieredMenu style="width:180px" overlay="false">  
+                        <p:submenu label="Clientes" icon="ui-icon-person">  
+                            <p:menuitem value="Save" actionListener="#{menuBean.save}" update="messages" icon="ui-icon-disk" />  
+                            <p:menuitem value="Update" actionListener="#{menuBean.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />  
+                        </p:submenu>  
+                        <p:submenu label="Reservas" icon="ui-icon-note">  
+                            <p:menuitem value="Delete" actionListener="#{menuBean.delete}" update="messages" ajax="false" icon="ui-icon-close"/>  
+                        </p:submenu> 
+                        <p:submenu label="Quartos" icon="ui-icon-key">  
+                            <p:menuitem value="Save" actionListener="#{menuBean.save}" update="messages" icon="ui-icon-disk" />  
+                            <p:menuitem value="Update" actionListener="#{menuBean.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />  
+                        </p:submenu>  
+                        <p:separator />  
+                        <p:submenu label="Usuarios" icon="ui-icon-gear">  
+                            <p:submenu label="Prime Links">  
+                                <p:menuitem value="Prime" url="http://www.prime.com.tr" />  
+                                <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />  
+                            </p:submenu>   
+                        </p:submenu>  
+                    </p:tieredMenu>  
+                </h:form> 
+            </p:layoutUnit>  
+        </p:layout>
+    </h:body>
+</html>
+

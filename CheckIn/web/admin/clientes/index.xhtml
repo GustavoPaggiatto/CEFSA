@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <title>Checkin</title>
 
@@ -23,7 +24,7 @@
 
         <p:layout fullPage="true">  
             <p:layoutUnit position="center">  
-                <h:form>  
+                <h:form>                      
                     <p:megaMenu >  
                         <p:menuitem value="Hotel 1" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
                         <p:menuitem value="Hotel 2" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
@@ -35,9 +36,9 @@
                             <h:outputLabel value="Clientes" style="font-weight: bolder" ></h:outputLabel>
                         </center>
                         <div style="text-align: right">
-                            <p:commandButton icon="ui-icon-plus" onclick="window.location='adicionar.xhtml'" value="Adicionar cliente"  />
+                            <p:commandButton icon="ui-icon-plus" onclick="window.location = 'adicionar.xhtml'" value="Adicionar cliente"  />
                         </div>
-                        
+
                         <p:tabView id="tabView" dynamic="true" cache="true">  
 
                             <p:tab id="tba1" title="Jurídico">  
@@ -93,6 +94,7 @@
 
 
             <p:layoutUnit id="leftPanel" position="west" size="200" resizable="true" closable="true" collapsible="true">  
+
                 <p:panel>
                     <h:outputText  value="   LOGO FFS   " />
                 </p:panel>
@@ -101,11 +103,9 @@
                     <p:growl id="messages"/>  
                     <p:tieredMenu style="width:180px" overlay="false">  
                         <p:submenu label="Clientes" icon="ui-icon-person">  
-                            <p:menuitem value="Save" actionListener="#{menuBean.save}" update="messages" icon="ui-icon-disk" />  
-                            <p:menuitem value="Update" actionListener="#{menuBean.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />  
-                        </p:submenu>  
+                            <p:menuitem value="Listar" update="messages" icon="ui-icon-disk" />                                                    </p:submenu>  
                         <p:submenu label="Reservas" icon="ui-icon-note">  
-                            <p:menuitem value="Delete" actionListener="#{menuBean.delete}" update="messages" ajax="false" icon="ui-icon-close"/>  
+                            <p:menuitem value="Listar" action="/admin/reservas/index.xhtml" update="messages" ajax="false" icon="ui-icon-close"/>  
                         </p:submenu> 
                         <p:submenu label="Quartos" icon="ui-icon-key">  
                             <p:menuitem value="Save" actionListener="#{menuBean.save}" update="messages" icon="ui-icon-disk" />  

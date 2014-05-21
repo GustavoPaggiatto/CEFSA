@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0047)#/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <title>CheckIn | A melhor rede de Hotéis</title>
+
+        <link rel="stylesheet" type="text/css" media="all" href="files/style.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="files/default.css" />
+        <link rel="stylesheet" id="custom-css" href="files/custom.css" type="text/css" media="all" />
+
+        <link rel="stylesheet" id="slides-css" href="files/slides.css" type="text/css" media="all" />
+        <link rel="stylesheet" id="chrome-style-css" href="files/chrome.css" type="text/css" media="all" />
+
+    </head>
+
+    <body>
+
+        <div class="welcome_inn_demo">
+            <div class="head">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#" title="Just another ThemeFuse Demo site">
+                            <img src="files/logo.png" alt="Welcome Inn" border="0" />
+                        </a>
+                    </div><!--/ .logo -->
+                    <div class="head_right">
+                        <div class="icon-top icon-phone">Olá,  <span>#{quartosBean.nomeCliente}</span></div>
+                        <!--<div class="icon-top icon-map">Faça <a href="#"><span>Login</span></a></div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-header">
+                <div class="container">
+                    <div class="menu-top">
+                        <ul id="tfusemenu" class="topmenu">
+                            <li id="menu-item-1605" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1605 first">
+                                <a href="files/index.htm"><span>Home</span></a>
+                            </li>
+                            <li id="menu-item-1605" class="menu-item menu-item-type-custom menu-item-object-custom">
+                                <a href="files/index.htm"><span>Quartos</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header">
+                <!-- slider --> 
+
+            </div>
+        </div>
+        <!--/ slider -->
+
+        <div class="header-line"></div>
+
+        <div class="middle" style="height: 100%">
+            <div class="container">
+
+                <div class="header-title-image">
+                    <div class="image">
+                        <img src="files/images/header_3.jpg" width="708" height="124" />
+                    </div>
+                    <h1><span>Conheça nossos</span> Quartos</h1>                    </div>
+
+
+                <!-- middle content -->
+                <div class="container_24">
+
+
+                    <!-- content -->
+                    <div class="grid_17 suffix_1" style="width: 800px">
+
+                        <h:form>
+                            <div class="text">
+                                <p:dataList paginator="true" rows="2" paginatorPosition="bottom" 
+                                            paginatorTemplate="{PreviousPageLink} {CurrentPageReport} {NextPageLink} {RowsPerPageDropdown}"  
+                                            type="none" value="#{quartosBean.quartos}" var="item">
+                                    <div class="room-item">
+                                        <h2><a href="#/?rooms=room1">QUARTO #{item.ID}</a></h2>
+
+                                        <div class="image">
+                                            <span class="alignleft preload"><a href="#/wp-content/uploads/sites/15/2012/10/temp_slide_1.jpg" rel="prettyPhoto[gallery548]"><img src="files/images/temp_slide_1-234x112.jpg" style="alignleft" alt="DOUBLE ROOM STANDARD" width="234" height="112" /></a></span>                <br />
+                                            <p:commandButton styleClass="btn btn-alugar" value="Reservar" action="#{quartosBean.SelecioQuartoReserva(item.ID)}"></p:commandButton>
+                                            <div style="display:none;" class="gallery-image">
+                                            </div><!--/ .gallery-image -->                                            
+                                        </div><!--/ .image -->
+
+                                        <div class="description">
+                                            <p>Hotel: #{item.hotel.nome}</p>
+                                            <div class="services-included">
+                                                <ul>
+                                                    <li class="service-1"><span>#{item.localidade.descricao}</span></li>
+                                                    <li class="service-2"><span>#{item.qtdHospedes} Estrelas</span></li>
+                                                    <li class="service-3"><span>#{item.tipoQuarto.descricao}</span></li>
+                                                    <li class="service-4"><span>#{item.valorDiaria}</span></li>                                                                                                        
+                                                </ul>
+                                                <div class="clear"></div>
+                                                <p></p></div>
+                                        </div><!--/ .description -->
+                                        <div class="clear"></div>
+                                    </div><!--/ .room-item -->
+                                    <!--<div class="room-item">
+                                        <h2><a href="#/?rooms=room1">QUARTO 324</a></h2>
+
+                                        <div class="image">
+                                            <span class="alignleft preload"><a href="#/wp-content/uploads/sites/15/2012/10/temp_slide_1.jpg" rel="prettyPhoto[gallery548]"><img src="files/images/temp_slide_1-234x112.jpg" style="alignleft" alt="DOUBLE ROOM STANDARD" width="234" height="112" /></a></span>                <br />
+                                            <button class='btn btn-alugar'>Reservar</button>
+                                            <div style="display:none;" class="gallery-image">
+                                            </div>
+                                        </div> -->
+
+                                    <!--<div class="description">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud included amenities:</p>
+                                        <div class="services-included">
+                                            <ul>
+                                                <li class="service-1"><span>Ar Condicionado</span></li>
+                                                <li class="service-2"><span>Serviço de Quarto</span></li>
+                                                <li class="service-3"><span>Mini-Bar</span></li>
+                                                <li class="service-4"><span>WiFi Grátis</span></li>
+                                                <li class="service-5"><span>TV (45 canais)</span></li>
+                                                <li class="service-6"><span></span></li>
+                                            </ul>
+                                            <div class="clear"></div>
+                                            <p></p></div>
+                                    </div> .description -->
+                                    <div class="clear"></div>
+                                    <!--</div>-->                                                 
+                                </p:dataList>
+                                <!--<div class="grid_6" style="float: right">
+                                    <div class="box box_black widget_text"><div class="inner"><h3 class="bordered"><span>Faça sua</span> Reserva</h3>    <div class="textwidget"><p><a href="#">Clique no botão</a> "Reservar" para escolher a melhor data para alugar o seu quarto de Hotel.
+                                                </p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>                   
+                                </div>-->
+                            </div>
+                        </h:form>
+                    </div>
+                    <!--/ content -->                   
+
+                    <div class="clear"></div>
+                </div>
+                <!--/ middle content -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container_24">
+                <div class="col col_2_5 ">
+                    <div class="address">
+                        <p>CheckIn Resort <br />
+                            Avenida Cidade Jardim , 625, São Paulo <br />
+                            Fone:  2133-5960 <br />
+                            Email: <a href="mailto:contato@checkin.com">contato@checkin.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col col_3_5 ">
+                    <div class="fallow">
+                        <span>Siga-nos:</span> <a href="#/#" class="link_social link_fb">Facebook</a> <a href="#/#" class="link_social link_twitter">Twitter</a>
+                    </div>
+                    <div class="copyright">
+                        <p>© 2014 CheckIn Resort</p>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </body>
+</html>

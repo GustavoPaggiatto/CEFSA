@@ -36,7 +36,7 @@
                             <h:outputLabel value="Reservas" style="font-weight: bolder" ></h:outputLabel>
                         </center>
 
-                        <p:dataTable paginator="true" rows="10" var="reserva" value="#{reservasBean.reservas}">  
+                        <p:dataTable paginator="true" rows="10" var="reserva" value="#{reservasBeanInterno.reservas}">  
                             <p:column headerText="Quantidade de dias">  
                                 <h:outputText value="#{reserva.qtdDias}" />  
                             </p:column>  

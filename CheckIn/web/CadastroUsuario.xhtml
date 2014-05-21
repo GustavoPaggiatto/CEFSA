@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <title>CheckIn | A melhor rede de Hotéis</title>
+
+        <link rel="stylesheet" type="text/css" media="all" href="files/style.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="files/default.css" />
+        <link rel="stylesheet" id="custom-css" href="files/custom.css" type="text/css" media="all" />
+
+        <link rel="stylesheet" id="slides-css" href="files/slides.css" type="text/css" media="all" />
+        <link rel="stylesheet" id="chrome-style-css" href="files/chrome.css" type="text/css" media="all" />
+    </h:head>
+    <h:body>
+        <div class="welcome_inn_demo">
+            <div class="head">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#" title="Just another ThemeFuse Demo site">
+                            <img src="files/logo.png" alt="Welcome Inn" border="0" />
+                        </a>
+                    </div><!--/ .logo -->
+                    <div class="head_right">
+                        <!--<div class="icon-top icon-phone">Olá,  <span></span></div>-->
+                        <!--<div class="icon-top icon-map">Faça <a href="#"><span>Login</span></a></div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-header">
+                <div class="container">
+                    <div class="menu-top">
+                        <ul id="tfusemenu" class="topmenu">
+                            <li id="menu-item-1605" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1605 first">
+                                <a href="files/index.htm"><span>Home</span></a>
+                            </li>
+                            <li id="menu-item-1605" class="menu-item menu-item-type-custom menu-item-object-custom">
+                                <a href="files/index.htm"><span>Quartos</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header">
+                <!-- slider --> 
+
+            </div>
+        </div>
+        <!--/ slider -->
+
+        <div class="header-line"></div>
+
+        <div class="middle" style="height: 100%">
+            <div class="container">
+
+                <div class="header-title-image">
+                    <div class="image">
+                        <img src="files/images/header_3.jpg" width="708" height="124" />
+                    </div>
+                    <h1><span>Crie sua conta</span></h1>                    </div>
+
+
+                <!-- middle content -->
+                <div class="container_24">                    
+                    <!-- slider --> 
+                    <div class="middle" style="background: none">
+                        <h:form>
+                            <div align="left" style="float: left; width: 50%">
+                                <table width="70%" align="left">
+                                    <tr>
+                                        <td class="text-gray text_italic">
+                                            <h:outputText value="Login:"></h:outputText>
+                                        </td>
+                                        <td class="text-green">
+                                            <h:inputText class="text-green"></h:inputText>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-gray text_italic">
+                                            <h:outputText value="Senha:"></h:outputText>
+                                        </td>
+                                        <td class="text-green">
+                                            <h:inputText class="text-green"></h:inputText>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div style="float: right; width: 50%" align="right">
+                                <table width="70%" align="left">
+                                    <tr>
+                                        <td class="text-gray text_italic text-left">
+                                            <h:outputText value="Tipo:"></h:outputText>
+                                        </td>
+                                        <td class="text-gray">
+                                            <p:selectOneRadio id="options">
+                                                <f:selectItem itemLabel="Físico" itemValue="1" />
+                                                <f:selectItem itemLabel="Jurídico" itemValue="2" />                                                    
+                                            </p:selectOneRadio>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-gray text_italic">
+                                            <h:outputText value="CPF:"></h:outputText>
+                                        </td>
+                                        <td class="text-green">
+                                            <h:inputText class="text-green"></h:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-gray text_italic">
+                                            <h:outputText value="Nome:"></h:outputText>
+                                        </td>
+                                        <td class="text-green">
+                                            <h:inputText class="text-green"></h:inputText>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-gray text_italic">
+                                            <h:outputText value="Sobrenome:"></h:outputText>
+                                        </td>
+                                        <td class="text-green">
+                                            <h:inputText class="text-green"></h:inputText>
+                                        </td>
+                                    </tr>
+
+
+                                    <!--<td class="text-gray text_italic">
+                                        <h:outputText value="Senha:"></h:outputText>
+                                    </td>
+                                    <td class="text-green">
+                                        <h:inputText class="text-green"></h:inputText>
+                                    </td>-->
+
+                                    <!--<td>
+                                        <div id="divClienteFisico" class="border">
+                                            <table width="100%" align="left">
+                                                <tr>
+                                                    <td class="text-gray text_italic">
+                                                        <h:outputText value="CPF:"></h:outputText>
+                                                    </td>
+                                                    <td class="text-green">
+                                                        <h:inputText class="text-green"></h:inputText>
+                                                    </td>
+
+
+                                                    <td class="text-gray text_italic">
+                                                        <h:outputText value="Nome:"></h:outputText>
+                                                    </td>
+                                                    <td class="text-green">
+                                                        <h:inputText class="text-green"></h:inputText>
+                                                    </td>
+
+                                                    <td class="text-gray text_italic">
+                                                        <h:outputText value="Sobrenome:"></h:outputText>
+                                                    </td>
+                                                    <td class="text-green">
+                                                        <h:inputText class="text-green"></h:inputText>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    </tr>-->
+                                </table>
+                            </div>
+                            <div>
+                                <p:commandButton  styleClass="btn" value="Cadastrar"></p:commandButton>                                        
+                            </div>
+                        </h:form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+

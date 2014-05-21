@@ -1,0 +1,1112 @@
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+.children #respond textarea,.children #respond .inputtext,.depth-1 #respond .inputtext,.depth-1 #respond .textarea{width:260px;}
+.text iframe {height:auto;}
+.map.shortcode	{max-width:300px;}
+.box.border.box{max-width:300px;}
+	.container_24{
+	    width: 300px}
+	
+	.grid_1,
+	.grid_2,
+	.grid_3,
+	.grid_4,
+	.grid_5,
+	.grid_6,
+	.grid_7,
+	.grid_8,
+	.grid_9,
+	.grid_10,
+	.grid_11,
+	.grid_12,
+	.grid_13,
+	.grid_14,
+	.grid_15,
+	.grid_16,
+	.grid_17,
+	.grid_18,
+	.grid_19,
+	.grid_20,
+	.grid_21,
+	.grid_22,
+	.grid_23,
+	.grid_24,
+	.col {
+	    margin: 5px 0}
+	
+	.container_24 .grid_1,
+	.container_24 .grid_2,
+	.container_24 .grid_3,
+	.container_24 .grid_4,
+	.container_24 .grid_5,
+	.container_24 .grid_6,
+	.container_24 .grid_7,
+	.container_24 .grid_8,
+	.container_24 .grid_9,
+	.container_24 .grid_10,
+	.container_24 .grid_11,
+	.container_24 .grid_12,
+	.container_24 .grid_13,
+	.container_24 .grid_14,
+	.container_24 .grid_15,
+	.container_24 .grid_16,
+	.container_24 .grid_17,
+	.container_24 .grid_18,
+	.container_24 .grid_19,
+	.container_24 .grid_20,
+	.container_24 .grid_21,
+	.container_24 .grid_22,
+	.container_24 .grid_23,
+	.container_24 .grid_24 {width: 300px}
+
+	/* Shortcode Columns */
+	.col_1,
+	.col_1_2,
+	.col_1_3,
+	.col_2_3,
+	.col_1_4,
+	.col_3_4,
+	.col_1_5,
+	.col_2_5,
+	.col_3_5,
+	.col_4_5,
+	.cols2 .col_1,
+	.cols2 .col_1_2,
+	.cols2 .col_1_3,
+	.cols2 .col_2_3,
+	.cols2 .col_1_4,
+	.cols2 .col_3_4,
+	.cols2 .col_1_5,
+	.cols2 .col_2_5,
+	.cols2 .col_3_5,
+	.cols2 .col_4_5 {width: 300px}
+	
+	.col_1.border,
+	.col_1_2.border,
+	.col_1_3.border,
+	.col_2_3.border,
+	.col_1_4.border,
+	.col_3_4.border,
+	.col_1_5.border,
+	.col_2_5.border,
+	.col_3_5.border,
+	.col_4_5.border,
+	.cols2 .col_1.border,
+	.cols2 .col_1_2.border,
+	.cols2 .col_1_3.border,
+	.cols2 .col_2_3.border,
+	.cols2 .col_1_4.border,
+	.cols2 .col_3_4.border,
+	.cols2 .col_1_5.border,
+	.cols2 .col_2_5.border,
+	.cols2 .col_3_5.border,
+	.cols2 .col_4_5.border {width:298px}	
+	
+	.box.border .col:first-child{
+		margin-left:0px}
+	
+	/* Middle content */	
+	.container {
+	    width:300px}
+	
+	.middle {
+		background:url(images/middle_center_bg.jpg) center 0 no-repeat #fff}
+	
+	.middle .container {
+	    padding-top:70px;
+		padding-bottom:20px;
+		background:none}
+		
+	.middle .padding50px {
+    	padding-top:30px!important}
+	
+	.sidebarLeft .content,
+	.sidebarRight .content {
+		padding:0}
+	
+	.container .content,
+	.container .sidebar {
+		float:none;
+		clear:both;
+		display:block}
+	
+	.container .content {
+		border-bottom:3px double #ccc;
+		margin:0 auto 30px auto;
+		padding:0 0 25px 0}
+	
+	.sidebarLeft .content {
+		border-top:3px double #ccc;
+		margin:30px auto 0 auto;
+		padding:25px 0 0 0}
+	
+	.container .sidebar {
+		width:230px;
+		margin:20px auto 0 auto}
+	
+	.text img.frame_center, 
+	.text img.frame_left, 
+	.text img.frame_right,
+	.text .frame_box {
+		max-width:284px !important}
+	
+	/* Header */
+	.head .container {
+    	height: auto}
+	
+	.logo {
+	    position:relative;
+	    top:5px;
+	    left:0;
+		text-align:center}
+	
+	.head_right {
+    	float:none;
+	    margin:15px auto 0;
+		padding-bottom:5px}
+	
+	.icon-top {
+	    line-height:1.8em}
+		
+	.menu-header .container {
+		padding:5px 0}
+	
+	.topmenu {
+		display:none}
+	
+	#topm-select {
+		font-size:13px;
+		line-height:23px;
+		height:23px;
+		width:218px;
+		padding:2px 3px;
+		margin:5px 0 0 37px;
+		background-color:#fff;
+		border:1px solid #d6dadd}
+	
+	#topm-select option {
+		padding:1px 0;
+		text-indent:3px}
+	
+	/* Header Image Slider */
+	.header {
+	    min-height:50px}
+	
+	.header .container {
+    	width:300px;
+    	min-height:116px}
+	
+	.homepage .container{
+    	height:138px;
+    	background:none}
+		
+	/* Homepage Baners Top */	
+	.baners_top {
+		position:relative;
+	    top:-40px;
+	    left:0;
+		margin-bottom:-40px}
+		
+	.baner-item {
+	    float:none;
+		margin:0 auto 25px auto}	
+	
+	.baner-item h2 {
+	    margin:0;
+	    font-size:19px}
+	
+	.baner-item h2 span {
+	    font-size:27px}
+	
+	/* Header Top Image */
+	.header-title-image {
+	    width:280px;
+	    top:-30px;
+		left:10px}
+	
+	.header-title-image .image {
+	    background:none;
+		-webkit-box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+		box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);	   
+	    padding:0;
+		width:280px;
+	    height:49px}
+	
+	.header-title-image h1,
+	.header-title-image strong {
+	    margin:10px 0 0 0;
+	    font-size:20px}
+	
+	.header-title-image h1 span,
+	.header-title-image strong span {
+	    font-size:29px}
+	
+	/* Footer */	
+	.footer {
+	    padding:20px 0}
+	
+	.footer .col_2_5 {
+		padding-bottom:30px}
+	
+	.copyright {
+	    padding-top:10px}
+		
+	/* Newsletter box */
+	.newsletter_box {
+	    width:100%;
+	    height: auto;
+	    margin-top:25px;
+		padding:15px 0 20px 0}
+	
+	.newsletter_box h3 {
+	    float:none;
+	    font-size:32px;
+	    width: auto;
+	    padding:0 0 10px 0;
+	    text-align:center}
+	
+	.container .newsletter_box .inputField {
+	    width:164px;
+	    margin:0 5px 0 2px}
+		
+		 .newsletter_box .inputField {
+	    width:164px;
+	    margin:0 5px 0 10px}
+	
+	/* Mini Gallery  */
+	.minigallery-list {
+	    padding:5px}
+	
+	.content .jcarousel-skin-tango .jcarousel-container-horizontal {
+		width:250px;
+		padding: 5px 14px;
+		margin:0 auto}	
+	
+	.content .jcarousel-skin-tango .jcarousel-clip-horizontal {
+	    width:248px}	
+		
+	.content .jcarousel-skin-tango .jcarousel-item {
+		width:110px;
+    	height:72px}
+	
+	.content .jcarousel-skin-tango .jcarousel-item-horizontal {
+		margin-left: 7px;
+    	margin-right: 7px}
+	
+	.content .jcarousel-skin-tango .jcarousel-next-horizontal,
+	.content .jcarousel-skin-tango .jcarousel-prev-horizontal {
+	    top: 38px}
+	
+	/* quotes */
+	.quote, .quote_right, .quote_left {
+		font-size:15px}
+	
+	.quote_right, .quote_left  {
+    	width:100%;
+		margin:10px auto;
+		float:none}
+	
+	/* Toggle Contents */
+	.toggle, h3.toggle {
+		font-size:17px}
+	
+	.faq_list .dropcap1 {
+		font-size:20px;
+		line-height:1em}
+	
+	/* Styled boxes */	
+	.styled_box_title,
+	.styled_box_content {
+		font-size:12px;
+		padding:7px 7px;
+		max-width:286px}
+	
+	/* List Rooms */
+	.room-item .image {
+	    float:none;
+	    margin:0 0 15px 0;
+	    min-height: inherit}
+	
+	.room-item .description {
+	    float:none;
+		clear:both;
+	    width:100%}
+	
+	.room-item .services-included {
+	    padding:10px 10px 5px 10px}		
+	
+	.services-included li,
+	.text .services-included li {
+	    margin:0;
+	    padding:5px 0 5px 0px;
+	    width:140px}
+	
+	.room-item .link-zoom {
+		display:none}
+	
+	/* News List items */
+	.full_width .news-item {
+	    margin-bottom:20px}
+	
+	.news-item h2 {
+	    font-size:20px;
+	    margin:10px 0 10px 0}	
+		
+	.news-item {
+	    margin-bottom:70px}
+	
+	.news-item .alignright, 
+	.news-item .alignleft {
+		margin:5px 0 !important;
+		float:none !important}
+	
+	.news-item .entry {
+		clear:both}
+	
+	/* Table Pricing */
+	.table-price thead td {
+		font-size:14px;
+		line-height:1.2em}
+		
+	.table-price thead td.first {
+		width:auto}
+	
+	.table-price thead td span {
+		padding-top:7px;
+		height:46px}
+	
+	.table-price tbody td {
+		padding:7px 5px;
+		font-size:12px;
+		vertical-align: top}
+	
+	.table-price tbody td strong {
+		font-size:18px}
+	
+	.table-price tbody td.first_col {
+		white-space:nowrap}
+	
+	/* Contact and Reservation Form  */	
+	#respond textarea{
+	    width:282px}
+	
+	.contact-form .row,.comment-respond .row {
+    	padding:8px 0}
+	
+	.contact-form .field_text .inputtext ,.comment-respond .field_text .inputtext {
+    	max-width:282px;
+    	margin-right:0px}
+	
+	.contact-form .ui-selectmenu {
+	    margin-right:0px}
+	
+	.contact-form .field_select select {
+   		width:300px}
+	
+	.reservationForm .notice {
+		clear:both}
+	
+	.contact-form .field_textarea textarea,.comment-respond .field_textarea textarea,
+	.reservationForm .inputtext,
+	.reservationForm textarea{
+		max-width:282px}
+	.reservationForm select{
+	max-width:300px
+	}
+	.contact-form select{
+	max-width:300px
+	}
+	.reservationForm .field_text .hasDatepicker {
+		max-width:260px;}
+	
+	.reservationForm .field_submit .submit_buton {
+		float:left;
+		margin-bottom:20px}
+	
+	.reservationForm .btn-send {
+		margin:0;
+		float:left}
+	
+	.reset-link {
+	    padding:5px 5px 0 0}
+		
+	/* Comment list */
+	.comment-body {
+	    padding:15px 0}
+	
+	.comment-entry {
+	    padding-top:5px;
+    	margin-left:0px}
+	
+	.comment-entry p {
+		margin-bottom:10px}
+		
+	.avatar {
+		margin-right:10px}
+	
+	.comment-text {
+		float:left;
+		width:240px}		
+	
+	.children .comment-entry {
+	    margin-left:0px}
+	
+	.children .avatar {
+	    padding-left:0px}
+	
+	/* sliders */
+	.text .slideshow {
+		width: 300px !important;
+	    height: 163px !important; /* 25px bottom navi space */}
+	
+	.text .slideshow .wrapper,
+	.text .slideshow ul li {
+		width: 300px !important;
+	    height: 138px !important}
+		
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.map.shortcode	{max-width:465px;}
+	.box.border.box{max-width:465px;}
+	.container_24{
+	    width: 468px}
+	
+	.container_24 .grid_1,
+	.container_24 .grid_2,
+	.container_24 .grid_3,
+	.container_24 .grid_4,
+	.container_24 .grid_5,
+	.container_24 .grid_6,
+	.container_24 .grid_7,
+	.container_24 .grid_8,
+	.container_24 .grid_9,
+	.container_24 .grid_10,
+	.container_24 .grid_11,
+	.container_24 .grid_12,
+	.container_24 .grid_13,
+	.container_24 .grid_14,
+	.container_24 .grid_15,
+	.container_24 .grid_16,
+	.container_24 .grid_17,
+	.container_24 .grid_18,
+	.container_24 .grid_19,
+	.container_24 .grid_20,
+	.container_24 .grid_21,
+	.container_24 .grid_22,
+	.container_24 .grid_23,
+	.container_24 .grid_24 {width: 468px}
+
+	/* Shortcode Columns */
+	.col_1,
+	.col_1_2,
+	.col_1_3,
+	.col_2_3,
+	.col_1_4,
+	.col_3_4,
+	.col_1_5,
+	.col_2_5,
+	.col_3_5,
+	.col_4_5,
+	.cols2 .col_1,
+	.cols2 .col_1_2,
+	.cols2 .col_1_3,
+	.cols2 .col_2_3,
+	.cols2 .col_1_4,
+	.cols2 .col_3_4,
+	.cols2 .col_1_5,
+	.cols2 .col_2_5,
+	.cols2 .col_3_5,
+	.cols2 .col_4_5 {width: 468px}
+	
+	.col_1.border,
+	.col_1_2.border,
+	.col_1_3.border,
+	.col_2_3.border,
+	.col_1_4.border,
+	.col_3_4.border,
+	.col_1_5.border,
+	.col_2_5.border,
+	.col_3_5.border,
+	.col_4_5.border,
+	.cols2 .col_1.border,
+	.cols2 .col_1_2.border,
+	.cols2 .col_1_3.border,
+	.cols2 .col_2_3.border,
+	.cols2 .col_1_4.border,
+	.cols2 .col_3_4.border,
+	.cols2 .col_1_5.border,
+	.cols2 .col_2_5.border,
+	.cols2 .col_3_5.border,
+	.cols2 .col_4_5.border {width:466px}	
+	
+	/* Middle content */	
+	.container {
+	    width:468px}
+	
+	.container .sidebar {
+		width:230px;
+		margin:20px auto 0 auto}
+			
+	.text img.frame_center, 
+	.text img.frame_left, 
+	.text img.frame_right,
+	.text .frame_box {
+		max-width:452px !important}
+	
+	/* Header */
+	.head .container {
+    	height:90px}
+	
+	.logo {
+	    top:12px;
+	    left:0;
+		text-align:left;
+		width:200px;
+		float:left}
+	
+	.head_right {
+    	float:right;
+		padding-bottom:0px}
+		
+	#topm-select {
+		margin:5px 0 0 121px}
+	
+	/* Header Image Slider */
+	.header {
+	    min-height:65px}
+	
+	.header .container {
+    	width:460px;
+    	min-height:182px}
+	
+	.homepage .container{
+    	height:220px}
+		
+	/* Homepage Baners Top */	
+	.baners_top {
+		position: absolute;
+    	top:-22px;
+	    left:0px;
+		margin-bottom:auto}
+		
+	.baner-item {
+	    float:left;
+		margin:0 5px 0 5px;
+		width:146px}
+	
+	.baner-img {
+    	background:none;
+    	padding:0}
+	
+	.baner-item img {
+    	width:146px;
+		-webkit-box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+		box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6)}
+	
+	.baner-item h2 {
+	    margin:0;
+	    font-size:17px}
+	
+	.baner-item h2 span {
+	    font-size:25px}
+	
+	/* Header Top Image */
+	.header-title-image {
+	    width:448px;
+	    top:-55px;
+		left:10px}
+	
+	.header-title-image .image {
+		width:448px;
+	    height:78px}
+	
+	/* Footer */	
+	.footer {
+	    padding:20px 0}
+	
+	.footer .col_3_5 {
+		float:left;
+		padding:0;		
+		width:220px;
+		margin-right:10px}
+	
+	.footer .col_2_5 {
+		float:left;
+		padding:0;
+		width:238px}
+	
+	.fallow span {
+		display:block}	
+	
+	.link_social {
+	    margin-left:6px}
+	
+	.copyright {
+	    padding-top:20px}
+	
+	/* Newsletter box */
+	.newsletter_box {
+	    width:100%;
+		padding:25px 0 20px 0}
+	
+	.newsletter_box h3 {
+	    float:left;
+	    font-size:25px;
+	    width: auto;
+	    padding:0 10px}
+	
+	.newsletter_box .inputField {
+	    width:160px;
+	    margin:0 5px 0 5px;
+		background-color:#fff}
+	
+	/* Mini Gallery */
+	.minigallery-list {
+	    padding:5px}
+	
+	.content .jcarousel-skin-tango .jcarousel-container-horizontal {
+		width:418px;
+		padding: 5px 14px;
+		margin:0 auto}	
+	
+	.content .jcarousel-skin-tango .jcarousel-clip-horizontal {
+	    width:414px}	
+		
+	.content .jcarousel-skin-tango .jcarousel-item {
+		width:120px;
+    	height:79px}
+	
+	.content .jcarousel-skin-tango .jcarousel-item-horizontal {
+		margin-left: 9px;
+    	margin-right: 9px}
+	
+	.content .jcarousel-skin-tango .jcarousel-next-horizontal,
+	.content .jcarousel-skin-tango .jcarousel-prev-horizontal {
+	    top: 40px}
+	
+	/* Styled boxes */	
+	.styled_box_title,
+	.styled_box_content {
+		padding:7px 10px;
+		max-width:448px}
+	
+	/* List Rooms */
+	.room-item .image {
+	    float:left;
+	    margin:0 10px 10px 0;
+	    min-height: inherit;
+		width:200px}
+	
+	.room-item .image img {
+		width:200px}
+	
+	.room-item .description {
+		clear:none}
+	
+	.room-item .services-included {
+		clear:both;
+		margin-top:10px;
+	    padding:10px 16px 5px 16px}		
+	
+	.services-included li,
+	.text .services-included li {	    
+	    width:145px}
+	
+	/* News List items */
+	.full_width .news-item {
+	    margin-bottom:20px}
+	
+	.news-item h2 {
+	    font-size:20px;
+	    margin:10px 0 10px 0}	
+		
+	.news-item {
+	    margin-bottom:60px}
+	
+	.news-item .alignleft {
+		margin:5px 10px 5px 0 !important;
+		float:left !important}
+	
+	.news-item .alignright {
+		margin:5px 0 5px 10px !important;
+		float:right !important}
+	
+	.news-item .entry {
+		clear:none}
+	
+	/* Table Pricing */
+	.table-price thead td {
+		font-size:15px;
+		line-height:1.2em}
+	
+	.table-price thead td span {
+		padding-top:13px;
+		height:40px}
+	
+	/* Contact and Reservation Form  */		
+	.contact-form .row,.comment-respond .row {
+    	padding:8px 0}
+	
+	.contact-form .field_text .inputtext,.comment-respond .field_text .inputtext {
+    	max-width:440px;
+    	margin-right:20px}
+	
+	.contact-form .ui-selectmenu {
+	    margin-right:20px}
+	
+	.contact-form .field_select select {
+   		max-width:438px;}
+		
+		.reservationForm select {
+max-width: 458px;
+}
+.contact-form select {
+max-width: 458px;
+}
+	
+	.content .reservationForm .field_text .inputtext, 
+	.content .reservationForm select {
+		margin-right:20px !important}
+	
+	.contact-form .field_textarea textarea,.comment-respond .field_textarea textarea,
+	.reservationForm textarea {
+		max-width:440px;
+		height:100px}
+	
+	.reservationForm .inputtext {
+		max-width:196px}
+	
+	.reservationForm .field_text .hasDatepicker {
+		max-width:418px}
+		
+	.reset-link {
+	    padding:5px 20px 0 0}
+		
+	/* Comment list */		
+	.comment-text {
+		width:408px}		
+		
+	/* sliders */
+	.text .slideshow {
+		width: 460px !important;
+	    height: 265px !important; /* 25px bottom navi space */}
+	
+	.text .slideshow .wrapper,
+	.text .slideshow ul li {
+		width: 460px !important;
+	    height: 240px !important}
+	
+}
+
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+	
+	.container_24, 
+	.container {
+	    width: 744px}
+	
+	.container_24 .grid_1 {width: 21px}
+	.container_24 .grid_2 {width: 52px}
+	.container_24 .grid_3 {width: 83px}
+	.container_24 .grid_4 {width: 114px}
+	.container_24 .grid_5 {width: 145px}
+	.container_24 .grid_6 {width: 176px}
+	.container_24 .grid_7 {width: 207px}
+	.container_24 .grid_8 {width: 238px}
+	.container_24 .grid_9 {width: 269px}
+	.container_24 .grid_10 {width: 300px}
+	.container_24 .grid_11 {width: 331px}
+	.container_24 .grid_12 {width: 362px}
+	.container_24 .grid_13 {width: 393px}
+	.container_24 .grid_14 {width: 424px}
+	.container_24 .grid_15 {width: 455px}
+	.container_24 .grid_16 {width: 486px}
+	.container_24 .grid_17 {width: 517px}
+	.container_24 .grid_18 {width: 548px}
+	.container_24 .grid_19 {width: 579px}
+	.container_24 .grid_20 {width: 610px}
+	.container_24 .grid_21 {width: 641px}
+	.container_24 .grid_22 {width: 672px}
+	.container_24 .grid_23 {width: 703px}
+	.container_24 .grid_24 {width: 734px}
+	
+	/* cols in full width */
+
+	.col_1_2 {width:352px}
+	.col_1_3 {width:228px}
+	.col_2_3 {width:476px}
+	.col_1_4 {width:166px}
+	.col_3_4 {width:538px}
+	.col_1_5 {width:128px}
+	.col_2_5 {width:276px}
+	.col_3_5 {width:428px}
+	.col_4_5 {width:576px}
+	
+	.col_1.border {width:722px}
+	.col_1_2.border {width:350px}
+	.col_1_3.border {width:226px}
+	.col_2_3.border {width:474px}
+	.col_1_4.border {width:164px}
+	.col_3_4.border {width:536px}
+	.col_1_5.border {width:126px}
+	.col_2_5.border {width:274px}
+	.col_3_5.border {width:426px}
+	.col_4_5.border {width:574px}
+		
+	/* cols with sidebar */
+	.cols2 .col_1 {width:460px}
+	.cols2 .col_1_2 {width:220px}
+	.cols2 .col_1_3 {width:140px}
+	.cols2 .col_2_3 {width:300px}
+	.cols2 .col_1_4 {width:100px}
+	.cols2 .col_3_4 {width:340px}
+	.cols2 .col_1_5 {width:76px}
+	.cols2 .col_2_5 {width:172px}
+	.cols2 .col_3_5 {width:268px}
+	.cols2 .col_4_5 {width:364px}
+	
+	.cols2 .col_1.border {width:458px}
+	.cols2 .col_1_2.border {width:218px}
+	.cols2 .col_1_3.border {width:138px}
+	.cols2 .col_2_3.border {width:298px}
+	.cols2 .col_1_4.border {width:98px}
+	.cols2 .col_3_4.border {width:338px}
+	.cols2 .col_1_5.border {width:74px}
+	.cols2 .col_2_5.border {width:170px}
+	.cols2 .col_3_5.border {width:266px}
+	.cols2 .col_4_5.border {width:362px}
+	
+	.container_24 .content {width:480px}
+	.container_24 .sidebar { width:230px}
+	
+	.sidebarLeft .content {
+		padding:0 0 0 14px}
+	.sidebarRight .content {
+		padding:0 14px 0 0}
+	
+	.cols2 .text img.frame_center, 
+	.cols2 .text img.frame_left, 
+	.cols2 .text img.frame_right,
+	.cols2 .text .frame_box {
+		max-width:464px !important}
+	
+	
+	.middle {
+		background:url(images/middle_center_bg.jpg) center 0 no-repeat #fff}
+	
+	.middle .container {
+		background:none}
+	
+	/* Header */
+	.topmenu li {
+	    margin-left:20px}
+	
+	.header .container {
+	    width:744px;}
+	
+	.homepage .container{
+	    height:404px;}
+	
+	.baners_top {
+    	left:12px;}
+	
+	/* Header Top Image */
+	.header-title-image {
+	    left:7px;}
+	
+	.homepage .container{
+    	height:294px;
+    	background:none}
+	
+	/* quotes */
+	.quote, .quote_right, .quote_left {
+		font-size:15px}
+	
+	.quote_right, .quote_left  {
+    	width:100%;
+		margin:10px auto;
+		float:none}
+	
+	/* Mini Gallery */
+	.minigallery-list {
+	    padding:5px}
+	
+	.content .jcarousel-skin-tango .jcarousel-container-horizontal {
+		width:418px;
+		padding: 5px 14px;
+		margin:0 auto}	
+	
+	.content .jcarousel-skin-tango .jcarousel-clip-horizontal {
+	    width:414px}	
+		
+	.content .jcarousel-skin-tango .jcarousel-item {
+		width:120px;
+    	height:79px}
+	
+	.content .jcarousel-skin-tango .jcarousel-item-horizontal {
+		margin-left: 9px;
+    	margin-right: 9px}
+	
+	.content .jcarousel-skin-tango .jcarousel-next-horizontal,
+	.content .jcarousel-skin-tango .jcarousel-prev-horizontal {
+	    top: 40px}
+	
+	/* Styled boxes */	
+	.styled_box_title,
+	.styled_box_content {
+		padding:7px 10px;
+		max-width:448px}
+	
+	/* List Rooms */	
+	.room-item .image {
+		margin-right:0;
+		min-height: inherit;}
+	
+	.room-item .description {
+		clear:none;
+		padding-top:10px;
+		width: auto}	
+	
+	.room-item .services-included {
+		clear:both;
+		margin-top:10px;
+	    padding:10px 16px 5px 16px}		
+	
+	.services-included li,
+	.text .services-included li {
+	    margin:0;
+	    padding:5px 0 5px 0px;
+	    width:148px}
+	
+	/* News List items */
+	.full_width .news-item {
+	    margin-bottom:20px}
+	
+	.news-item h2 {
+	    font-size:20px;
+	    margin:10px 0 10px 0}	
+		
+	.news-item {
+	    margin-bottom:60px}
+	
+	.news-item .alignleft {
+		margin:5px 10px 5px 0 !important;
+		float:left !important}
+	
+	.news-item .alignright {
+		margin:5px 0 5px 10px !important;
+		float:right !important}
+	
+	.news-item .entry {
+		clear:none}
+	
+	/* Table Pricing */
+	.table-price thead td {
+		font-size:15px;
+		line-height:1.2em}
+	
+	.table-price thead td span {
+		padding-top:13px;
+		height:40px}
+	
+	/* Contact and Reservation Form  */		
+	.contact-form .row ,.comment-respond .row{
+    	padding:8px 0}
+	
+	.contact-form .field_text .inputtext ,.comment-respond .field_text .inputtext{
+    	max-width:440px;
+    	margin-right:20px}
+	
+	.contact-form .ui-selectmenu {
+	    margin-right:20px}
+	
+	.contact-form .field_select select {
+   		max-width:438px;}
+		
+		.reservationForm select {
+max-width: 458px;
+}
+	
+	.content .reservationForm .field_text .inputtext, 
+	.content .reservationForm select {
+		margin-right:20px !important}
+	
+	.contact-form .field_textarea textarea,.comment-respond .field_textarea textarea,
+	.reservationForm textarea {
+		max-width:440px;
+		height:100px}
+	
+	.reservationForm .inputtext {
+		max-width:196px}
+	
+	.reservationForm .field_text .hasDatepicker {
+		max-width:418px}
+	.reservationForm .field_submit .submit_buton {
+		float:left;
+		margin-bottom:20px}
+	
+	.reservationForm .btn-send {
+		margin:0;
+		float:left}
+	
+	.reservationForm .notice {
+		clear:both}
+		
+	.reset-link {
+	    padding:5px 30px 0 0}
+		
+	/* Comment list */
+	.comment-body {
+	    padding:15px 0}
+	
+	.comment-entry {
+	    padding-top:5px;
+    	margin-left:0px}
+	
+	.comment-entry p {
+		margin-bottom:10px}
+		
+	.avatar {
+		margin-right:10px}
+	
+	.comment-text {
+		float:left;
+		width:420px}		
+	
+	.children .comment-entry {
+	    margin-left:0px}
+	
+	.children .avatar {
+	    padding-left:0px}
+		
+	/* sliders */
+	.text .slideshow {
+		width: 480px !important;
+	    height: 275px !important; /* 25px bottom navi space */}
+	
+	.text .slideshow .wrapper,
+	.text .slideshow ul li {
+		width: 480px !important;
+	    height: 250px !important}
+	
+	/* Toggle Contents */
+	.toggle, h3.toggle {
+		font-size:17px}
+	
+	.faq_list .dropcap1 {
+		font-size:20px;
+		line-height:1em}
+			
+}
+
+@media only screen and (min-width: 990px) and (max-width: 1200px)  {	
+	
+
+}
+
+/* Only For iPads */
+@media only screen and (device-width: 768px) {
+	
+	.topmenu li.last ul li:hover>ul {
+		left:-155px !important}
+	 
+}

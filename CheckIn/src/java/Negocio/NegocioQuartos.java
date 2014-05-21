@@ -7,6 +7,7 @@ package Negocio;
 
 import Beans.Quartos;
 import DAO.DAOQuartos;
+import java.lang.reflect.Type;
 
 /**
  *
@@ -22,9 +23,18 @@ public class NegocioQuartos {
 
     public Quartos obterQuarto(int idQuarto) {
         Quartos quarto;
-        
+
         quarto = _daoQuartos.obterQuarto(idQuarto);
-        
+
         return quarto;
+    }
+
+    public Iterable<Quartos> obterQuartosPorCodigoHotel(int idHotel, Type t) {
+        return _daoQuartos.obterQuartosPorCodigoHotel(idHotel, t);
+    }
+    
+    public Iterable<Quartos> obterTodosQuartos(Type t)
+    {
+        return _daoQuartos.GetAll(t);
     }
 }

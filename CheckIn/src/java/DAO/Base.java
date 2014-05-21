@@ -47,14 +47,14 @@ public abstract class Base<T> {
             Query q = session.createQuery("FROM " + t.getTypeName() + " WHERE " + predicado);
 
             Iterable<T> objs = q.list();
-
-            session.close();
-
+            
             return objs;
         } catch (Exception ex) {
             ex.printStackTrace();
+        } finally {
+            session.close();
         }
-        
+
         return null;
     }
 
@@ -62,6 +62,7 @@ public abstract class Base<T> {
         try {
             Query q = session.createQuery("FROM " + t.getTypeName());
             Iterable<T> objs = q.list();
+            
             return objs;
         } catch (Exception e) {
             System.out.println("ERRO: " + e.getMessage());
@@ -69,7 +70,6 @@ public abstract class Base<T> {
         } finally {
             session.close();
         }
-
     }
 
     public void save(T t) {
