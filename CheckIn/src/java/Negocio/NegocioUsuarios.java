@@ -6,6 +6,7 @@
 package Negocio;
 
 import Beans.Cliente;
+import Beans.Usuario;
 import DAO.DAOUsuarios;
 import java.security.NoSuchAlgorithmException;
 
@@ -29,5 +30,10 @@ public class NegocioUsuarios {
         Cliente c  = new Cliente();
         c = _daoUsuarios.obterClienteLogado(senha,login);
         return c;
+    }
+    
+    public void InsereUsuario(Usuario u)
+    {
+        _daoUsuarios.save(u);
     }
 }

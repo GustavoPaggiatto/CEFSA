@@ -4,7 +4,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <head>
+    <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
         <title>CheckIn | A melhor rede de Hotéis</title>
 
@@ -23,7 +23,7 @@
                 $('.dtp').datepicker();
             });
         </script>
-    </head>
+    </h:head>
     <body class="chome">
         <div class="welcome_inn_demo">
             <div class="head">
@@ -35,7 +35,7 @@
                     </div><!--/ .logo -->
                     <div class="head_right">
                         <div class="icon-top icon-phone">Olá,  <span>#{reservasBean.nomeCliente}</span></div>
-                        <div class="icon-top icon-map">Faça <a href="#"><span>Login</span></a></div>
+                        <!--<div class="icon-top icon-map">Faça <a href="#"><span>Login</span></a></div>-->
                     </div>
                 </div>
             </div>
@@ -45,10 +45,13 @@
                     <div class="menu-top">
                         <ul id="tfusemenu" class="topmenu">
                             <li id="menu-item-1605" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1605 first">
-                                <a href="files/index.htm"><span>Home</span></a>
+                                <a href="index_1.xhtml"><span>Home</span></a>
                             </li>
                             <li id="menu-item-1605" class="menu-item menu-item-type-custom menu-item-object-custom">
-                                <a href="files/index.htm"><span>Quartos</span></a>
+                                <a href="listing.xhtml"><span>Quartos</span></a>
+                            </li>
+                            <li id="menu-item-1605" class="menu-item menu-item-type-custom menu-item-object-custom">
+                                <a href="Sobre.xhtml"><span>Sobre</span></a>
                             </li>
                         </ul>
                     </div>
@@ -114,8 +117,8 @@
                                 <div class="row field_text alignleft  omega " style="">
                                     <label for="welcome-inn_subject">Hóspedes:</label><br/>
                                     <h:selectOneMenu id="selectHospedes" styleClass="ui-state-default" value="#{reservasBean.selecionado}">
-                                        <f:selectItems value="#{reservasBean.qtdHospedesString()}" var="qtd"
-                                                       itemValue="#{reservasBean.qtdHospedes}" actionListener="#{reservasBean.setSelecionado(qtd)}"></f:selectItems>                                        
+                                        <f:selectItems value="#{reservasBean.qtdHospedes}"  itemLabel="#{qtd} pessoa(s)" var="qtd"
+                                                        actionListener="#{reservasBean.setSelecionado(qtd)}"></f:selectItems>                                        
                                     </h:selectOneMenu>
                                     <!--<select type="text" style="width:281px;" class="ui-state-default" name="pessoas">
                                         <option>1 pessoa</option>

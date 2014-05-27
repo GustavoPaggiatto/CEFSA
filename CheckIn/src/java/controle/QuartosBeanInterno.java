@@ -5,8 +5,10 @@
  */
 package controle;
 
+import Beans.Quartos;
 import Beans.Reservas;
-import Negocio.NegocioReservas;
+import Negocio.NegocioQuartos;
+import static controle.QuartosBean.log;
 import java.util.ArrayList;
 import java.util.Iterator;
 import javax.faces.bean.ManagedBean;
@@ -21,54 +23,55 @@ import org.apache.log4j.Logger;
  */
 @ManagedBean
 @RequestScoped
-public class ReservasBeanInterno {
+public class QuartosBeanInterno {
 
     /**
-     * Creates a new instance of ReservasBeanInterno
+     * Creates a new instance of QuartosBeanInterno
      */
-    static Logger log = Logger.getLogger(ReservasBeanInterno.class.getName());
-
-    public ReservasBeanInterno() {
+    static Logger log = Logger.getLogger(QuartosBeanInterno.class.getName());
+    
+    public QuartosBeanInterno() {
         try {
-            this.ObterReservas();
+            this.obterTodosOsQuartos();
         } catch (Exception ex) {
             log.error(ex);
         }
     }
-    
-    private ArrayList<Reservas> reservas;
-    private NegocioReservas negReservas;
-    
-    public void ObterReservas() {
-        negReservas = new NegocioReservas();
-        Iterable<Reservas> iterable = negReservas.obterTodasReservas();
+
+    ArrayList<Quartos> quartos;
+    NegocioQuartos negQuartos;
+
+    private void obterTodosOsQuartos() {
+        negQuartos = new NegocioQuartos();
+        quartos = new ArrayList<>();
         String valueSession = "";
+
+        Iterable t = negQuartos.obterTodosQuartos(Quartos.class);
+        Iterator i = t.iterator();
         Object o = new Object();
-        
-        reservas = new ArrayList<>();
-        Iterator i = iterable.iterator();
+
         HttpSession s = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true);
         if (s.getAttribute("idHotel") != null) {
             valueSession = s.getAttribute("idHotel").toString();
         }
-        
+
         while (i.hasNext()) {
             o = i.next();
             if (valueSession != "") {
-                if (((Reservas) o).getQuarto().getHotel().getID() == Integer.parseInt(valueSession)) {
-                    reservas.add((Reservas) o);
+                if (((Quartos) o).getHotel().getID() == Integer.parseInt(valueSession)) {
+                    quartos.add((Quartos) o);
                 }
             } else {
-                reservas.add((Reservas) o);
+                quartos.add((Quartos) o);
             }
         }
     }
-    
-    public ArrayList<Reservas> getReservas() {
-        return reservas;
+
+    public ArrayList<Quartos> getQuartos() {
+        return quartos;
     }
-    
-    public void setReservas(ArrayList<Reservas> reservas) {
-        this.reservas = reservas;
+
+    public void setQuartos(ArrayList<Quartos> quartos) {
+        this.quartos = quartos;
     }
 }

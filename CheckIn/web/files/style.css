@@ -2730,6 +2730,10 @@ p.form-submit
 {
 margin-bottom: 0;
 }
+.noborder{
+    border: none;
+}
+
 p.form-submit #submit
 {
 background: url(images/btn_sprite.png) 0 0 no-repeat;

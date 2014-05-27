@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <title>CheckIn | A melhor rede de Hotéis</title>
+
+        <link rel="stylesheet" type="text/css" media="all" href="files/style.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="files/default.css" />
+        <link rel="stylesheet" id="custom-css" href="files/custom.css" type="text/css" media="all" />
+
+        <link rel="stylesheet" id="slides-css" href="files/slides.css" type="text/css" media="all" />
+        <link rel="stylesheet" id="chrome-style-css" href="files/chrome.css" type="text/css" media="all" />
+    </head>
+    <h:body>
+        <div class="header-line"></div>
+
+        <div class="middle">
+            <div class="container">
+
+                <div class="header-title-image">
+                    <div class="image">
+                        <img src="Imagens/header_5.jpg" width="708" height="124"/>
+                    </div>
+                    <h1><span>Meu Perfil</span></h1>
+                </div>
+
+
+                <!-- middle content -->
+                <div class="container_24">
+
+
+                    <!-- content -->
+                    <div class="grid_17 suffix_1 contact-form">
+
+                        <div class="text">
+                            <h2>EDITAR PERFIL - PESSOA FÍSICA</h2>
+
+                            <h:form class="ajax_form contactForm">
+
+                                <div class="row field_text alignleft  " style="">
+                                    <label for="welcome-inn_yourname">Nome:</label><br/>
+                                    <h:inputText id="nomeUser" style="width:281px;" validator="#{validacaoStringIsNullOrEmpty.validate}" required="true" value="#{cadUsuarioFisicoBean.nome}" requiredMessage="Valor obrigatório" class="inputtext input_middle tf_cf_required_input"/>
+                                    <h:message for="nomeUser" style="color: red" />  
+                                </div>
+
+                                <div class="row field_text alignleft  omega " style="">
+                                    <label for="welcome-inn_youremail">Sobrenome:</label><br/>
+                                    <h:inputText id="sobreNome" style="width:281px;" validator="#{validacaoStringIsNullOrEmpty.validate}" value="#{cadUsuarioFisicoBean.sobrenome}" required="true" requiredMessage="Valor obrigatório" class="inputtext input_middle welcome-inn_email tf_cf_required_input "/>
+                                    <h:message for="sobreNome" style="color: red" />  
+                                </div>
+
+                                <div class="clear"></div>
+
+                                <div class="row field_text alignleft  omega " style="">
+                                    <label for="welcome-inn_subject">CPF:</label><br/>
+                                    <h:inputText id="CPF"  style="width:281px;" validator="#{validacaoStringIsNullOrEmpty.validate}" required="true" value="#{cadUsuarioFisicoBean.cpf}" requiredMessage="Valor obrigatório" class="inputtext input_middle  mk_cpf"/>
+                                    <h:message for="CPF" style="color: red" />  
+                                </div>
+
+                                <div class="clear"></div>
+
+                                <div class="row field_text alignleft  omega " style="">
+                                    <label for="welcome-inn_subject">Senha:</label><br/>
+                                    <h:inputSecret id="senha" style="width:281px;" value="#{cadUsuarioFisicoBean.senha}" required="true" requiredMessage="Valor obrigatório" binding="#{validacao.senhaInput}" class="inputtext input_middle"/>
+                                    <h:message for="senha" style="color: red" />  
+                                </div>
+
+                                <div class="row field_text alignleft  omega " style="">
+                                    <label for="welcome-inn_subject">Nova Senha:</label><br/>
+                                    <h:inputSecret id="novaSenha" value="#{cadUsuarioFisicoBean.senha}" style="width:281px;" required="true" requiredMessage="Valor obrigatório" validator="#{validacao.validate}" class="inputtext input_middle">                                        
+                                    </h:inputSecret>
+                                    <h:message for="novaSenha" style="color: red" /> 
+                                </div>
+
+                                <div class="clear"></div>
+
+
+                                <div class="row" style="width:94%; text-align:right;">
+                                    <p:commandButton action="#{cadUsuarioFisicoBean.insereUsuarioFisico()}" styleClass="btn btn-alugar" value="Salvar"></p:commandButton>                                    
+
+                                </div>
+                            </h:form>                            
+                        </div>
+                    </div>
+                    <!--/ content -->
+
+                    <div class="grid_6"><!-- sidebar -->
+                        <div class="box box_black widget_text">
+                            <div class="inner">
+                                <h3 class="bordered"><span>Faça uma reserva conosco!</span></h3>  
+                            </div>
+                        </div>
+                    </div><!--/ sidebar -->
+
+                    <div class="clear"></div>
+                </div>
+                <!--/ middle content -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container_24">
+                <div class="col col_2_5 ">
+                    <div class="address">
+                        <p>CheckIn Resort,<br/>
+                            Avenida Cidade Jardim , 625, São Paulo<br/>
+                            Fone:  2133-5960<br/>
+                            Email: <a href="mailto:contato@checkin.com">contato@checkin.com</a></p>
+                    </div>
+                </div>
+                <div class="col col_3_5 ">
+                    <div class="fallow">
+                        <span>Siga-nos:</span> <a href="#/#" class="link_social link_fb">Facebook</a> <a href="#/#" class="link_social link_twitter">Twitter</a>
+                    </div>
+                    <div class="copyright">
+                        <p>© 2014 CheckIn Resort</p>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </h:body>
+</html>
+

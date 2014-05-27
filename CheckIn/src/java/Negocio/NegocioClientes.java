@@ -25,8 +25,12 @@ public class NegocioClientes {
     public Iterable<ClienteJuridico> ObterClientesJuridicos(Type t) {
         return _daoClientes.ObterClientesJuridicos(t);
     }
-    
+
     public Iterable<ClienteFisico> ObterClientesFisicos(Type t) {
         return _daoClientes.ObterClientesFisicos(t);
+    }
+
+    public void InsereCliente(ClienteFisico c) {
+        _daoClientes.save(c);
     }
 }

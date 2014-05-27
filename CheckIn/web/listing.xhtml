@@ -5,7 +5,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 
-    <head>
+    <h:head>
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -18,7 +18,12 @@
         <link rel="stylesheet" id="slides-css" href="files/slides.css" type="text/css" media="all" />
         <link rel="stylesheet" id="chrome-style-css" href="files/chrome.css" type="text/css" media="all" />
 
-    </head>
+        <style type="text/css">  
+            .ui-datalist-content{  
+                border: 0px transparent;       
+            }  
+        </style>
+    </h:head>
 
     <body>
 
@@ -42,10 +47,13 @@
                     <div class="menu-top">
                         <ul id="tfusemenu" class="topmenu">
                             <li id="menu-item-1605" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1605 first">
-                                <a href="files/index.htm"><span>Home</span></a>
+                                <a href="index_1.xhtml"><span>Home</span></a>
                             </li>
                             <li id="menu-item-1605" class="menu-item menu-item-type-custom menu-item-object-custom">
-                                <a href="files/index.htm"><span>Quartos</span></a>
+                                <a href="#"><span>Quartos</span></a>
+                            </li>
+                            <li id="menu-item-1605" class="menu-item menu-item-type-custom menu-item-object-custom">
+                                <a href="Sobre.xhtml"><span>Sobre</span></a>
                             </li>
                         </ul>
                     </div>
@@ -78,9 +86,9 @@
                     <!-- content -->
                     <div class="grid_17 suffix_1" style="width: 800px">
 
-                        <h:form>
+                        <h:form style="border:  0px transparent">
                             <div class="text">
-                                <p:dataList paginator="true" rows="2" paginatorPosition="bottom" 
+                                <p:dataList style="border: 0px" paginator="true" rows="2" paginatorPosition="bottom" 
                                             paginatorTemplate="{PreviousPageLink} {CurrentPageReport} {NextPageLink} {RowsPerPageDropdown}"  
                                             type="none" value="#{quartosBean.quartos}" var="item">
                                     <div class="room-item">

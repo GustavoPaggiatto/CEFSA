@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-        xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Checkin</title>
 
@@ -24,9 +24,9 @@
                 <h:form>  
 
                     <p:megaMenu >  
-                        <p:menuitem value="Hotel 1" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
-                        <p:menuitem value="Hotel 2" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
-                        <p:menuitem value="Hotel 3" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 1" action="#{secoesInterno.sessionHotelSeleiconado(1)}" icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 2" action="#{secoesInterno.sessionHotelSeleiconado(2)}"  icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 3" action="#{secoesInterno.sessionHotelSeleiconado(3)}" icon="ui-icon-suitcase" />  
                     </p:megaMenu> 
                     <br/>
                     <h:form>  
@@ -50,8 +50,8 @@
                         </p:dataTable>  
                     </h:form>  
 
-                    </h:form>
-                </p:layoutUnit>  
+                </h:form>
+            </p:layoutUnit>  
 
 
             <p:layoutUnit id="leftPanel" position="west" size="200" resizable="true" closable="true" collapsible="true">  
@@ -69,8 +69,7 @@
                             <p:menuitem value="Listar" action="admin/reservas/index.xhtml" update="messages" ajax="false" icon="ui-icon-close"/>  
                         </p:submenu> 
                         <p:submenu label="Quartos" icon="ui-icon-key">  
-                            <p:menuitem value="Save" actionListener="#{menuBean.save}" update="messages" icon="ui-icon-disk" />  
-                            <p:menuitem value="Update" actionListener="#{menuBean.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />  
+                            <p:menuitem value="Listar" action="/admin/Quartos/Quartos.xhtml" update="messages" icon="ui-icon-disk" />                              
                         </p:submenu>  
                         <p:separator />  
                         <p:submenu label="Usuarios" icon="ui-icon-gear">  

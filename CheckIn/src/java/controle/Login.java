@@ -14,6 +14,7 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -24,6 +25,7 @@ import javax.servlet.http.HttpSession;
 public class Login {
     private final String response = "/CheckIn/listing.xhtml";
     public String loginUsuarioValue, senha;
+    static Logger log = Logger.getLogger(Login.class.getName());
     
     public Login()
     {
@@ -49,7 +51,7 @@ public class Login {
         }
         catch(Exception e)
         {
-            //Vai gravar Log
+            log.error(e);
         }                
     }
 

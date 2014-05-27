@@ -26,9 +26,9 @@
             <p:layoutUnit position="center">  
                 <h:form>  
                     <p:megaMenu >  
-                        <p:menuitem value="Hotel 1" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
-                        <p:menuitem value="Hotel 2" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
-                        <p:menuitem value="Hotel 3" url="http://www.primefaces.org" icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 1" action="#{secoesInterno.sessionHotelSeleiconado(1)}" icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 2" action="#{secoesInterno.sessionHotelSeleiconado(2)}" icon="ui-icon-suitcase" />  
+                        <p:menuitem value="Hotel 3" action="#{secoesInterno.sessionHotelSeleiconado(3)}" icon="ui-icon-suitcase" />  
                     </p:megaMenu> 
                     <hr/>
                     <h:form>  
@@ -71,15 +71,13 @@
                     <p:growl id="messages"/>  
                     <p:tieredMenu style="width:180px" overlay="false">  
                         <p:submenu label="Clientes" icon="ui-icon-person">  
-                            <p:menuitem value="Save" actionListener="#{menuBean.save}" update="messages" icon="ui-icon-disk" />  
-                            <p:menuitem value="Update" actionListener="#{menuBean.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />  
+                            <p:menuitem value="Listar" action="/admin/clientes/index.xhtml" update="messages" ajax="false" icon="ui-icon-close"/>  
                         </p:submenu>  
                         <p:submenu label="Reservas" icon="ui-icon-note">  
-                            <p:menuitem value="Delete" actionListener="#{menuBean.delete}" update="messages" ajax="false" icon="ui-icon-close"/>  
+                            <p:menuitem value="Listar" update="messages" icon="ui-icon-disk" />                                                   
                         </p:submenu> 
                         <p:submenu label="Quartos" icon="ui-icon-key">  
-                            <p:menuitem value="Save" actionListener="#{menuBean.save}" update="messages" icon="ui-icon-disk" />  
-                            <p:menuitem value="Update" actionListener="#{menuBean.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />  
+                            <p:menuitem value="Listar" action="/admin/Quartos/Quartos.xhtml" update="messages" icon="ui-icon-disk" />                              
                         </p:submenu>  
                         <p:separator />  
                         <p:submenu label="Usuarios" icon="ui-icon-gear">  
@@ -88,7 +86,7 @@
                                 <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />  
                             </p:submenu>   
                         </p:submenu>  
-                    </p:tieredMenu>  
+                    </p:tieredMenu>                         
                 </h:form> 
             </p:layoutUnit>  
 
