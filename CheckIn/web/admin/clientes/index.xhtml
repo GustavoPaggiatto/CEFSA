@@ -48,7 +48,7 @@
                                     </p:column>  
 
                                     <p:column headerText="CNPJ">  
-                                        <h:outputText value="#{cliente.cnpj}" />  
+                                        <p:inputMask mask="99.999.999/9999-99" readonly="true" value="#{cliente.cnpj}" />  
                                     </p:column>  
 
                                     <p:column headerText="Multinacional">  
@@ -74,7 +74,7 @@
                                     </p:column>  
 
                                     <p:column headerText="CPF">  
-                                        <h:outputText value="#{cliente.cpf}" />  
+                                        <p:inputMask mask="999.999.999-99" readonly="true" value="#{cliente.cpf}" />  
                                     </p:column>  
 
                                     <p:column headerText="Ações"> 

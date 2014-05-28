@@ -34,7 +34,7 @@
                             </div>
                             <div>
                                 <h:outputText class="text-green text_italic" value="CPF: "></h:outputText>
-                                <h:inputText class="text-green text_italic" value="#{login.loginUsuarioValue}"></h:inputText>
+                                <p:inputMask mask="999.999.999-99" styleClass="text-green text_italic" value="#{login.loginUsuarioValue}"></p:inputMask>
                                 &nbsp;
                                 <h:outputText class="text-green text_italic" value="Senha: "></h:outputText>
                                 <h:inputSecret class="text-green text_italic" value="#{login.senha}"></h:inputSecret>                                                                                     

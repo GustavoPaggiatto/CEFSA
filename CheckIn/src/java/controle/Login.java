@@ -37,6 +37,7 @@ public class Login {
         try
         {
             Negocio.NegocioUsuarios negUsuarios = new NegocioUsuarios();
+            this.loginUsuarioValue = this.loginUsuarioValue.replace(".", "").replace("-", "");
             if(negUsuarios.AutenticaUsuario(this.loginUsuarioValue, this.senha))                
             {
                 String url = this.response;

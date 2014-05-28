@@ -19,9 +19,51 @@
         <script type="text/javascript" src='files/jquery-ui-1.9.2.custom.min.js'></script>
 
         <script type="text/javascript">
+
             $(document).ready(function() {
                 $('.dtp').datepicker();
+
+
             });
+
+
+            $('#btnReservar').click(function() {
+                var dataInit = $('#dataIni').text();
+                var dataFimt = $('#dataFim').text();
+                if (dataInit != null) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/CheckIn/location.xhtml?method=reservarQuarto", //&dataIni;=" + dataInit + "&dataFim;=" + dataFimt;,
+                        success: function(data, textStatus, jqXHR) {
+                            $('#modal').display = 'block';
+                            $('#modal').fadeIn(slow);
+                        }                       //data: {dataIni: dataInit, dataFim: dataFimt},
+
+                    });
+                }
+                alert('reserva');
+                $('#modal').fadeIn(slow);
+                $('.dtp').datepicker();
+            });
+
+            /*function a() {
+             $('.dtp').datepicker();
+             $(function() {
+             var dataInit = $('#dataIni').text();
+             var dataFimt = $('#dataFim').text();
+             $('.dtp').datepicker();
+             $.ajax({
+             type: "POST",
+             url: "/CheckIn/location.xhtml?method=reservarQuarto"//&dataIni;=" + dataInit + "&dataFim;=" + dataFimt;
+             data: {dataIni: dataInit, dataFim: dataFimt
+             },
+             success: function() {
+             $('#modal').fadeIn(slow);
+             $('.dtp').datepicker();
+             },
+             });
+             });
+             }*/
         </script>
     </h:head>
     <body class="chome">
@@ -105,12 +147,12 @@
 
                                 <div class="row field_text alignleft  omega " style="">
                                     <label for="welcome-inn_subject">Data Incial:</label><br/>
-                                    <h:inputText style="width:281px;" class="inputtext input_middle dtp" value="#{reservasBean.dataInicial}"/>
+                                    <h:inputText id="dataIni" style="width:281px;" class="inputtext input_middle dtp" value="#{reservasBean.dataInicial}"/>
                                 </div>
 
                                 <div class="row field_text alignleft  omega " style="">
                                     <label for="welcome-inn_subject">Data Final:</label><br/>
-                                    <h:inputText style="width:281px;"  class="inputtext input_middle dtp" value="#{reservasBean.dataFinal}" />
+                                    <h:inputText id="dataFim" style="width:281px;"  class="inputtext input_middle dtp" value="#{reservasBean.dataFinal}" />
                                 </div>
 
 
@@ -118,7 +160,7 @@
                                     <label for="welcome-inn_subject">Hóspedes:</label><br/>
                                     <h:selectOneMenu id="selectHospedes" styleClass="ui-state-default" value="#{reservasBean.selecionado}">
                                         <f:selectItems value="#{reservasBean.qtdHospedes}"  itemLabel="#{qtd} pessoa(s)" var="qtd"
-                                                        actionListener="#{reservasBean.setSelecionado(qtd)}"></f:selectItems>                                        
+                                                       actionListener="#{reservasBean.setSelecionado(qtd)}"></f:selectItems>                                        
                                     </h:selectOneMenu>
                                     <!--<select type="text" style="width:281px;" class="ui-state-default" name="pessoas">
                                         <option>1 pessoa</option>
@@ -132,9 +174,8 @@
 
 
                                 <div class="row" style="width:94%; text-align:right;">
-
-                                    <p:commandButton action="#{reservasBean.reservarQuarto()}" styleClass="btn btn-alugar" value="Reservar"></p:commandButton>                                    
-
+                                    <p:commandButton id="btnRservar" action="#{reservasBean.reservarQuarto()}" onsuccess="alert('Reserva efetuada com sucesso!')" styleClass="btn btn-alugar" value="Reservar">                                        
+                                    </p:commandButton>  
                                 </div>
 
                             </div>
@@ -155,6 +196,9 @@
                     <!--/ middle content -->
                 </div>
             </h:form>                            
+        </div>
+        <div style="display: none; width: 300px; z-index: 1; height: 300px" id="modal" class="border">
+            testando
         </div>
 
         <div class="footer">

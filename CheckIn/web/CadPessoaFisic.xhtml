@@ -58,7 +58,7 @@
 
                                 <div class="row field_text alignleft  omega " style="">
                                     <label for="welcome-inn_subject">CPF:</label><br/>
-                                    <h:inputText id="CPF"  style="width:281px;" validator="#{validacaoStringIsNullOrEmpty.validate}" required="true" value="#{cadUsuarioFisicoBean.cpf}" requiredMessage="Valor obrigatório" class="inputtext input_middle  mk_cpf"/>
+                                    <h:inputText id="CPF"  style="width:281px;" validator="#{cpfValidator.validate}" required="true" value="#{cadUsuarioFisicoBean.cpf}" requiredMessage="Valor obrigatório" class="inputtext input_middle  mk_cpf"/>
                                     <h:message for="CPF" style="color: red" />  
                                 </div>
 
