@@ -1,1 +1,1 @@
-# CEFSA
+For University usage
