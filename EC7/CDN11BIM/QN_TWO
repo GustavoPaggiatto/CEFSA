@@ -1,14 +1,9 @@
- >    
-   Fs = 600 ;                   
-   dt = 1/Fs;                   
-   StopTime = 1.00;             
-   t = (0:dt:StopTime-dt)';     
-   
-   Fc = 600;                     
-   x = 0.5 + (2/pi)*sin(2*pi*Fc*t) + (2/(3*pi))*sin(3*2*pi*Fc*t);
-   
-   figure;
-   plot(t,x,'black');
-   xlabel('t(s)');
-   ylabel('f(t)');
-   zoom xon;
+freq = 600;
+phase = 0;
+omega = 2 * pi * freq;
+passo = 0.00001;
+tfinal = 2;
+time = 0 : passo: tfinal/freq;
+seno = 0.5 + (2/pi)*sin(omega*time+phase) + (2/(3*pi))*sin(3*omega*time + phase);
+clf
+plot(time,seno,'k','LineWidth',2);
