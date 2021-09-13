@@ -1,4 +1,6 @@
 window.onload = function () {
+  $(".loading").addClass("show");
+
   fetch("https://dog.ceo/api/breeds/list/all", {
     method: "GET",
     mode: "cors",
@@ -52,6 +54,8 @@ window.onload = function () {
           },
         },
       });
+
+      $(".loading").removeClass("show");
     });
 };
 

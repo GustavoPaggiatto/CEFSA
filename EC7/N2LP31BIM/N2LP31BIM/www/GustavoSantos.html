@@ -8,27 +8,25 @@
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/dataTables.dataTables.css">
-    <link rel="stylesheet" href="css/dataTables.bootstrap5.css">
     <title>N2 1BIM</title>    
 </head>
 <body>
     <div class="container">
-        <h1>Gustavo Paggiatto - API</h1>
-        <h4 class="form-group">Essa API obtem todas as raças de cachorros cadastradas e também algumas subdivisões das mesmas (caso exista).</h4>
+        <h1>Gustavo Santos - API</h1>
+        <h4 class="form-group">Essa API obtem uma imagem (randômica) referente a raça selecionada.</h4>
         <div class="row form-group" style="margin-top: 30px;">
-            <div class="col-sm-12">
-                <table id="table-breeds" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Nome</th>
-                            <th>Variações</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody-breeds">
-                    </tbody>
-                </table>
+            <div class="col-sm-12 col-md-1">
+                <label for="sel-breeds">Raça:</label>
+            </div>
+            <div class="col-sm-12 col-md-2">
+                <select id="sel-breeds" class="form-control">
+                    <option value="-1" selected>Selecione</option>
+                </select>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-12 text-center">
+                <img id="img-dog" src="img/empty.jpg" style="max-width: 200px; height: auto;" />
             </div>
         </div>
         <div class="row">
@@ -45,10 +43,7 @@
     <script src="cordova.js"></script>
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.dataTables.js"></script>
-    <script src="js/dataTables.dataTables.js"></script>
-    <script src="js/dataTables.bootstrap5.js"></script>
-    <script src="js/gustavoPaggiatto.js"></script>
+    <script src="js/gustavoSantos.js"></script>
 </body>
 
 </html>

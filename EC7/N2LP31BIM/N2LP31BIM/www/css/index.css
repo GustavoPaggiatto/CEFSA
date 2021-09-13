@@ -10845,4 +10845,20 @@ textarea.form-control-lg {
     margin-bottom: 20px;
 }
 
+.loading {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: none;  
+  z-index: 3000;
+  opacity: 0.5;
+  background-color: #f2f2f2;
+}
+
+.loading.show {
+  display: block !important;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
