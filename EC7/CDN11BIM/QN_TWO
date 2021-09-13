@@ -1,0 +1,9 @@
+freq = 600;
+phase = 0;
+omega = 2 * pi * freq;
+passo = 0.00001;
+tfinal = 2;
+time = 0 : passo: tfinal/freq;
+seno = 0.5 + (2/pi)*sin(omega*time+phase) + (2/(3*pi))*sin(3*omega*time + phase);
+clf
+plot(time,seno,'k','LineWidth',2);
