@@ -50,9 +50,9 @@ window.onload = function () {
           sInfoEmpty: "Exibindo 0 a 0 de 0 registros",
           oPaginate: {
             sPrevious: "Anterior",
-            sNext: "Próxima",
-          },
-        },
+            sNext: "Próxima"
+          }
+        }
       });
 
       $(".loading").removeClass("show");
