@@ -70,17 +70,17 @@ function getSubBreeds() {
 
       window.dtSubsBreeds = $("#tb-subs-breeds").DataTable({
         paging: true,
-        searching: false,
+        searching: true,
         pageLength: 5,
         oLanguage: {
-          sLengthMenu: "Exibir _MENU_ registros por página",
-          sSearch: "Procurar:",
+          sLengthMenu: "",
+          sSearch: "",
           sZeroRecords: "Nenhuma informação encontrada",
-          sInfo: "Exibindo _START_ a _END_ de _TOTAL_ registros",
-          sInfoEmpty: "Exibindo 0 a 0 de 0 registros",
+          sInfo: "",
+          sInfoEmpty: "",
           oPaginate: {
-            sPrevious: "Anterior",
-            sNext: "Próxima"
+            sPrevious: "<",
+            sNext: ">"
           }
         }
       });
