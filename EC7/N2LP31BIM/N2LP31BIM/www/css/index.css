@@ -10875,4 +10875,13 @@ textarea.form-control-lg {
   display: block !important;
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #212529;
+  padding: 20px;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
